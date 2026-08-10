@@ -1,0 +1,37 @@
+# SPHERE-PPL Wheat Crop Disease Forecasting -- reproducibility environment.
+#
+# Versions are pinned to what the results in analysis/ were actually produced with,
+# so the panel reproduces the submitted numbers rather than whatever resolves today.
+# Developed and run on Python 3.13.13.
+#
+#   python -m venv venv && source venv/bin/activate
+#   pip install -r requirements.txt
+#
+# Reproduce the forecast (in this order -- each step writes inputs for the next):
+#   python analysis/fetch_growing_season_weather.py --parse-only   # rebuild from cached JSON
+#   python analysis/thermal_wetness_splash.py
+#   python analysis/growth_stage.py
+#   python analysis/xgboost_model.py            # Septoria forecast + test scores
+#   python analysis/shrinkage_calibration.py    # yellow rust smoother selection
+#
+# NOTE ON THE WEATHER CACHE: analysis/weather_raw/ holds the raw Open-Meteo daily
+# JSON, so every step above runs OFFLINE and is exactly reproducible. Only
+# fetch_growing_season_weather.py WITHOUT --parse-only calls the network, and it
+# skips any region already cached. Source: Open-Meteo Historical Weather API
+# (ERA5/ERA5-Land reanalysis), free and key-free.
+
+# --- required by the submitted pipeline ---
+pandas==3.0.5
+numpy==2.5.1
+xgboost==3.4.0
+
+# --- required only to re-run the superseded analyses in analysis/_removed/ ---
+# Those scripts (model comparisons, ablations, diagnostics) are kept for provenance
+# and are cited throughout the surviving docstrings, but none is needed to produce
+# the forecast. Uncomment to run them.
+#
+# scikit-learn==1.9.0    # glm_model.py, example_comparison.py
+# scipy==1.18.0          # skewness handling in example_comparison.py
+# lightgbm               # lightgbm_model.py
+# catboost               # catboost_model.py
+# pykalman==0.11.2       # example_comparison.py (reproduces the contest example's imputer)

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.Rhistory
+~$*
+venv/
+
+# Retired / scratch work kept locally only
+_removed/
+*_removed
+*_removed/
