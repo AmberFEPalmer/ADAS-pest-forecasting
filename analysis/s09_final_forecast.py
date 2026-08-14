@@ -1,12 +1,6 @@
 """
 The forecast script. Produces submission/pest_forecasts_2026.csv and
 submission/pest_model_performance.csv in the contest's required format.
-
-The 2026 predictor file (agronomic/fungicide/LUC) is released with the targets. Until then those columns
-are missing for 2026 and XGBoost handles them natively via its sparsity-aware
-splits -- the forecast is produced from 2026 WEATHER plus disease history, which are
-already available. Re-running this script after the release picks the new columns up
-automatically, with no code change. 
 """
 
 import sys
@@ -15,12 +9,12 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, "analysis")
-from rolling_origin import (  
+from s08_rolling_origin import (  
     CAT, SEED, fit_origin, smoother_predictions, transforms,
 )
-from xgboost_model import (  
-    BASE_TARGETS, LEAVES, build_feature_table, mechanistic_feature_cols,
-    per_target_feature_cols, rmse,
+from s07_features_and_model import (
+    BASE_TARGETS, LEAVES, build_feature_table, clip_to_range,
+    mechanistic_feature_cols, per_target_feature_cols, rmse,
 )
 
 FORECAST_YEAR = 2026
@@ -79,6 +73,14 @@ def route(rows, origin, feature_sets, smooth):
                  + (1 - w) * smooth[(target, sname)].reindex(future.index)
         else:
             raise ValueError(kind)
+
+        ### Every target is a percentage. Severity is clipped at 0 already by its expm1
+        ### inverse, but incidence is modelled untransformed, so both the raw model and
+        ### the model/smoother blend can land outside [0, 100] -- 2026 produced two
+        ### negative yellow rust incidences before this. Clipping to the physically
+        ### possible range can only reduce RMSE, since every actual value is inside it.
+        pred = pd.Series(clip_to_range(pred.to_numpy()), index=pred.index)
+
         for idx, p in pred.items():
             r = future.loc[idx]
             out.append({"Region": r.Region, "Leaf": r.Leaf, "year": int(r.Year),

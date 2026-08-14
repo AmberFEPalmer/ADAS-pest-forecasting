@@ -9,9 +9,9 @@ import pandas as pd
 import xgboost as xgb
 
 sys.path.insert(0, "analysis")
-from fungicide_decay import compute_fungicide_features  
-from season_reference import compute_sow_offsets  
-from spatial_spread import compute_spatial_features  
+from s05_fungicide_decay import compute_fungicide_features  
+from s01_season_reference import compute_sow_offsets  
+from s06_spatial_spread import compute_spatial_features  
 
 CURATED_AGRO_COLS = [
     "Unknown_ag_12",   # % fields sown with non-certified/unknown-provenance seed
@@ -51,7 +51,23 @@ def growth_stage_cols(cols):
     return [c for c in cols if c.startswith(GROWTH_STAGE_PREFIXES) and not c.endswith("_mean_rh")]
 
 
-def build_feature_table(lag1_all_targets=True, spatial=False, growth_stage=True):
+### UKCPVS (UK Cereal Pathogen Virulence Survey) yellow rust race surveillance. Numeric
+### columns lifted from data/ukcpvs_yellow_rust.csv; the free-text ones are provenance
+### only. OFF by default -- see build_feature_table(ukcpvs=...) for why.
+UKCPVS_CSV = "data/ukcpvs_yellow_rust.csv"
+UKCPVS_COLS = ["samples_received", "n_counties_sampled", "new_race_detected",
+               "rl_ratings_revised", "epidemic_followed"]
+
+
+def load_ukcpvs():
+    u = pd.read_csv(UKCPVS_CSV, comment="#")[["year"] + UKCPVS_COLS]
+    u = u.rename(columns={"year": "Year", **{c: f"ukcpvs_{c}_lag1" for c in UKCPVS_COLS}})
+    u["Year"] = u["Year"] + 1
+    return u
+
+
+def build_feature_table(lag1_all_targets=True, spatial=False, growth_stage=True,
+                        ukcpvs=False):
     pest = pd.read_csv("data/pest_data.csv")
     long_pest = melt_pest_long(pest)
 
@@ -102,6 +118,10 @@ def build_feature_table(lag1_all_targets=True, spatial=False, growth_stage=True)
     base = base.merge(fung_feats, on=["Region", "Year"], how="left")
     base = base.merge(agro, on=["Region", "Year"], how="left")
 
+    ### national, so it varies by Year only -- no Region key
+    if ukcpvs:
+        base = base.merge(load_ukcpvs(), on="Year", how="left")
+
     base["sow_offset"] = base.apply(lambda r: sow_map.get((r["Region"], r["Year"]), sow_default), axis=1)
 
     luc_wide = luc.set_index(["Region", "Year"])[["prop_anth", "prop_nature"]]
@@ -116,6 +136,15 @@ def build_feature_table(lag1_all_targets=True, spatial=False, growth_stage=True)
 
 def rmse(a, b):
     return float(np.sqrt(np.mean((np.asarray(a) - np.asarray(b)) ** 2)))
+
+
+### Every target is a percentage: incidence is % of fields, severity is % leaf area
+TARGET_LO, TARGET_HI = 0.0, 100.0
+
+
+def clip_to_range(values):
+    """Force predictions into the physically possible range for a percentage."""
+    return np.clip(values, TARGET_LO, TARGET_HI)
 
 ### expanding-window cross-validation folds
 def time_series_folds(years, n_folds=N_FOLDS, val_years=VAL_YEARS):
@@ -185,10 +214,14 @@ def per_target_feature_cols(model_rows):
     all_cols = default_feature_cols(model_rows)
     natl_cols = [c for c in all_cols if c.endswith("_natl_lag1")]
     gs = growth_stage_cols(all_cols)
-    routed = set(natl_cols) | set(gs) | {c for c in all_cols if c.endswith("_nbr_lag1")}
+    ### UKCPVS surveys a yellow rust pathogen, so it is routed to those targets only --
+    ### same treatment as the national spread columns. Absent unless ukcpvs=True.
+    ukcpvs_cols = [c for c in all_cols if c.startswith("ukcpvs_")]
+    routed = (set(natl_cols) | set(gs) | set(ukcpvs_cols)
+              | {c for c in all_cols if c.endswith("_nbr_lag1")})
     base_cols = [c for c in all_cols if c not in routed]
     return {t: base_cols
-               + (natl_cols if "Yellow_rust" in t else [])
+               + (natl_cols + ukcpvs_cols if "Yellow_rust" in t else [])
                + ([] if "Yellow_rust" in t else gs)
             for t in BASE_TARGETS}
 
@@ -320,13 +353,13 @@ if __name__ == "__main__":
     for tr_years, val_years_block in folds:
         print(f"  train <= {tr_years[-1]} (n_years={len(tr_years)})  val {val_years_block[0]}-{val_years_block[-1]}")
 
-    res.to_csv("analysis/xgboost_results.csv", index=False)
+    res.to_csv("analysis/s07_test_results.csv", index=False)
     # Pivot predictions back to the submission's wide L1_/L2_ column layout.
     preds_wide = preds.pivot(index=["Region", "Year"], columns="Leaf",
                               values=[f"{t}_pred" for t in BASE_TARGETS])
     preds_wide.columns = [f"{leaf}_{t}" for t, leaf in preds_wide.columns]
     preds_wide = preds_wide.reset_index()
-    preds_wide.to_csv("analysis/xgboost_predictions.csv", index=False)
+    preds_wide.to_csv("analysis/s07_test_predictions.csv", index=False)
 
     print("\n=== RMSE by target (test = 2016+, L1+L2 pooled) ===")
     print(res.to_string(index=False))

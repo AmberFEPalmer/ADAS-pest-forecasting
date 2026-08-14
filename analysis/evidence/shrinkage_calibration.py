@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, "analysis")
-from xgboost_model import (  # noqa: E402
+from s07_features_and_model import (  # noqa: E402
     BASE_TARGETS, TEST_START, TRAIN_END, build_feature_table, model_rows_from,
     per_target_feature_cols, rmse, run_targets,
 )
@@ -17,7 +17,7 @@ SEEDS = [0, 1, 2, 3, 4]
 WEIGHTS = np.round(np.arange(0.0, 1.01, 0.1), 2)
 VAL_TRAIN_END = 2005
 VAL_START = 2006
-OUT_CSV = "analysis/shrinkage_calibration_results.csv"
+OUT_CSV = "analysis/evidence/shrinkage_calibration_results.csv"
 
 
 def transforms(target):
@@ -72,7 +72,7 @@ def score_weights(rows, feature_cols, train_end, test_start, smooth):
 
 
 def select_w_rolling_origin(rows, feature_cols, smooth, last_forecast_year=TRAIN_END):
-    from rolling_origin import FIRST_ORIGIN, fit_origin  # noqa: E402 (heavy import, only needed here)
+    from s08_rolling_origin import FIRST_ORIGIN, fit_origin  # noqa: E402 (heavy import, only needed here)
 
     sse, n_obs = {}, {}
     for origin in range(FIRST_ORIGIN, last_forecast_year):
@@ -160,7 +160,7 @@ if __name__ == "__main__":
     print("\n=== test RMSE (2016+) ===")
     print(out.round(3).to_string())
     print("\nvs_model_%       : negative = tuned shrinkage beats the current model")
-    print("vs_fixed_blend_% : negative = tuning w beats the 0.5 blend rolling_origin.py already had")
+    print("vs_fixed_blend_% : negative = tuning w beats the 0.5 blend s08_rolling_origin.py already had")
     print("cost_of_honesty_%: how much worse than choosing w on the test split")
 
     print("\n=== full test-RMSE curve over w (roll_k8), to see how flat the optimum is ===")

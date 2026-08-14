@@ -7,16 +7,27 @@
 #   python -m venv venv && source venv/bin/activate
 #   pip install -r requirements.txt
 #
-# Reproduce the forecast (in this order -- each step writes inputs for the next):
-#   python analysis/fetch_growing_season_weather.py --parse-only   # rebuild from cached JSON
-#   python analysis/thermal_wetness_splash.py
-#   python analysis/growth_stage.py
-#   python analysis/xgboost_model.py            # Septoria forecast + test scores
-#   python analysis/shrinkage_calibration.py    # yellow rust smoother selection
+# REPRODUCE THE FORECAST. analysis/ is numbered in dependency order -- run from the
+# repo ROOT (every path inside is repo-relative), in this order:
+#
+#   python analysis/s02_fetch_weather.py --parse-only  # -> growing_season_weather.csv
+#   python analysis/s03_thermal_wetness_splash.py      # -> thermal_wetness_splash.csv
+#   python analysis/s04_growth_stage.py                # -> growth_stage.csv
+#   python analysis/s07_features_and_model.py          # test scores + feature importances
+#   python analysis/s09_final_forecast.py              # -> submission/*.csv  <-- THE FORECAST
+#
+# s01_season_reference, s05_fungicide_decay, s06_spatial_spread and s08_rolling_origin
+# are imported by the steps above rather than run directly.
+#
+# analysis/evidence/ holds the analyses that justify the design (which learner, which
+# routing, which features mattered). None is needed to produce the forecast:
+#   python analysis/evidence/model_comparison.py       # XGBoost vs LightGBM/CatBoost/GLM
+#   python analysis/evidence/shrinkage_calibration.py  # yellow rust smoother selection
+#   python analysis/evidence/shap_analysis.py          # feature attribution + figures
 #
 # NOTE ON THE WEATHER CACHE: analysis/weather_raw/ holds the raw Open-Meteo daily
 # JSON, so every step above runs OFFLINE and is exactly reproducible. Only
-# fetch_growing_season_weather.py WITHOUT --parse-only calls the network, and it
+# s02_fetch_weather.py WITHOUT --parse-only calls the network, and it
 # skips any region already cached. Source: Open-Meteo Historical Weather API
 # (ERA5/ERA5-Land reanalysis), free and key-free.
 
@@ -25,13 +36,12 @@ pandas==3.0.5
 numpy==2.5.1
 xgboost==3.4.0
 
-# --- required only to re-run the superseded analyses in analysis/_removed/ ---
-# Those scripts (model comparisons, ablations, diagnostics) are kept for provenance
-# and are cited throughout the surviving docstrings, but none is needed to produce
-# the forecast. Uncomment to run them.
+# --- required only for analysis/evidence/ (never for the forecast) ---
+# Uncomment to re-run those three scripts.
 #
-# scikit-learn==1.9.0    # glm_model.py, example_comparison.py
-# scipy==1.18.0          # skewness handling in example_comparison.py
-# lightgbm               # lightgbm_model.py
-# catboost               # catboost_model.py
-# pykalman==0.11.2       # example_comparison.py (reproduces the contest example's imputer)
+# shap==0.52.0           # evidence/shap_analysis.py (values come from XGBoost's
+# matplotlib==3.11.1     #   pred_contribs; shap/matplotlib only draw the figures)
+# scikit-learn==1.9.0    # evidence/glm_model.py, used by evidence/model_comparison.py
+# scipy==1.18.0          # evidence/shap_analysis.py (rank correlations)
+# lightgbm==4.7.0        # evidence/model_comparison.py
+# catboost==1.2.10       # evidence/model_comparison.py

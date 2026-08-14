@@ -62,7 +62,7 @@ def compute_spatial_features(long_pest, targets):
 
 
 if __name__ == "__main__":
-    from xgboost_model import BASE_TARGETS, melt_pest_long
+    from s07_features_and_model import BASE_TARGETS, melt_pest_long
 
     pest = pd.read_csv("data/pest_data.csv")
     long_pest = melt_pest_long(pest)

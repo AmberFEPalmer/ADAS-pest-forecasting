@@ -1,7 +1,6 @@
 """
 Daily weather -> crop development features
 Aligns weather to crop growth stages e.g. GS31, GS39, GS61, GS75
-
 """
 
 import sys
@@ -11,9 +10,9 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, "analysis")
-from fetch_growing_season_weather import REGIONS, load_daily ### Crop degree days
-from season_reference import compute_sow_offsets, daily_wetness_hours ### wetness hours
-from thermal_wetness_splash import daily_splash_risk ### splash risk
+from s02_fetch_weather import REGIONS, load_daily ### Crop degree days
+from s01_season_reference import compute_sow_offsets, daily_wetness_hours ### wetness hours
+from s03_thermal_wetness_splash import daily_splash_risk ### splash risk
 
 OUT_CSV = "analysis/growth_stage.csv"
 

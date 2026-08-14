@@ -20,7 +20,6 @@ SOW_WEEK_OFFSETS = {  # days from 1 Oct to the midpoint of each drilling week
     "October 31 - November 05_ag_1": 33,
 }
 
-
 def compute_sow_offsets():
     """Weighted-mean sowing-day offset from 1 Oct, per region-year, from the
     agronomic sow-week percentage columns. Falls back to the all-data mean
@@ -34,7 +33,6 @@ def compute_sow_offsets():
     default = mean_offset.mean()
     out = pd.DataFrame({"Region": agro.Region, "Year": agro.Year, "sow_offset": mean_offset.fillna(default)})
     return out.set_index(["Region", "Year"])["sow_offset"], default
-
 
 def daily_wetness_hours(precip, rh):
     return np.where(precip >= 1.0, 24.0, np.clip((rh - 75.0) / 15.0, 0, 1) * 24.0)

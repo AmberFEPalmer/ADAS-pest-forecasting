@@ -19,14 +19,14 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, "analysis")
-from xgboost_model import (  # noqa: E402
+from s07_features_and_model import (  # noqa: E402
     BASE_TARGETS, TEST_START, TRAIN_END, build_feature_table, model_rows_from,
     per_target_feature_cols, rmse, time_series_folds,
 )
 
 SEEDS = [0, 1, 2, 3, 4]
 CAT_COLS = ["Region", "Leaf"]
-OUT_CSV = "analysis/model_comparison_results.csv"
+OUT_CSV = "analysis/evidence/model_comparison_results.csv"
 
 COMMON = dict(max_depth=3, learning_rate=0.03, subsample=0.8, colsample=0.7,
               l2=2.0, l1=0.5, min_child_weight=5, n_rounds=600, patience=40)
@@ -174,7 +174,7 @@ def run_glm(model_rows, feature_cols):
 
 if __name__ == "__main__":
     warnings.filterwarnings("ignore")
-    sys.path.insert(0, "analysis/_removed") 
+    sys.path.insert(0, "analysis/evidence") 
 
     table = build_feature_table(spatial=True)
     model_rows = model_rows_from(table)

@@ -12,7 +12,7 @@ import pandas as pd
 import xgboost as xgb
 
 sys.path.insert(0, "analysis")
-from xgboost_model import (  # noqa: E402
+from s07_features_and_model import (  # noqa: E402
     BASE_TARGETS, build_feature_table, mechanistic_feature_cols, model_rows_from,
     per_target_feature_cols, rmse,
 )
@@ -123,7 +123,7 @@ if __name__ == "__main__":
         print(f"  origin {origin} -> {origin+1} done", flush=True)
 
     d = pd.DataFrame(recs)
-    d.to_csv("analysis/rolling_origin_results.csv", index=False)
+    d.to_csv("analysis/s08_rolling_origin_results.csv", index=False)
 
     # Pooled RMSE across all forecast years (weighted by rows, not a mean of RMSEs).
     d["sse"] = d.rmse ** 2 * d.n

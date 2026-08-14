@@ -14,8 +14,8 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, "analysis")
-from fetch_growing_season_weather import REGIONS, load_daily  
-from season_reference import daily_wetness_hours 
+from s02_fetch_weather import REGIONS, load_daily  
+from s01_season_reference import daily_wetness_hours 
 
 OUT_CSV = "analysis/thermal_wetness_splash.csv"
 

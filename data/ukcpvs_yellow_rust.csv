@@ -1,0 +1,47 @@
+# UK Cereal Pathogen Virulence Survey (UKCPVS) -- wheat yellow rust (Puccinia striiformis f.sp. tritici).
+# Annual national race/virulence surveillance run by NIAB, funded by AHDB and Defra. Survey established 1967.
+#
+# HOW TO READ THIS FILE. `year` is the SURVEY/GROWING season the observation describes. The survey for
+# season Y is published the following MARCH, so when forecasting year Y the most recent available survey is
+# Y-1. s07_features_and_model.build_feature_table(ukcpvs=True) applies that shift for you and exposes the
+# columns as ukcpvs_*_lag1. Never join this file on year directly -- that would leak the future.
+#
+# PROVENANCE. Every populated cell is traceable via the `source` column. Blank cells are NOT zero and NOT
+# missing-at-random: they are values nobody has transcribed yet. Do not fill them by inference.
+#
+# TO EXTEND. Each UKCPVS annual report has these sections for yellow rust:
+#   4.1.1 Samples received                        -> samples_received, n_counties_sampled
+#   4.1.2.2 Virulence frequencies for pathotype groups -> genetic-group shares (NOT captured here; see below)
+#   Appendix I Sample Register                    -> per-sample county, the only route to REGIONAL resolution
+# Reports: https://ahdb.org.uk/knowledge-library/uk-cereal-pathogen-virulence-survey-ukcpvs
+#
+# DELIBERATELY NOT CAPTURED. Genetic-group composition shares (Red/Pink/Purple/Blue, e.g. "Red 37 and Red 28
+# each 17% of the population" in 2020) are omitted because only ~25 isolates are pathotyped per season, so
+# the shares are too noisy to use as a regression feature. The event flags below are the robust signal.
+#
+# COLUMNS
+#   year                  survey/growing season
+#   samples_received      yellow rust samples received by the survey that season
+#   n_counties_sampled    distinct UK counties the samples came from
+#   new_race_detected     1 = a race/pathotype not previously seen in the UK was confirmed that season
+#   resistance_gene_broken  Yr gene or variety whose resistance was overcome (free text, blank if none)
+#   rl_ratings_revised    1 = AHDB revised Recommended List yellow rust ratings as a result
+#   epidemic_followed     1 = the report/AHDB links that season's population change to an actual epidemic
+#   notes                 short verbatim-grounded description
+#   source                where the row came from
+year,samples_received,n_counties_sampled,new_race_detected,resistance_gene_broken,rl_ratings_revised,epidemic_followed,notes,source
+2011,,,1,Yr7 + Spaldings Prolific,,,"Warrior race identified; foreign incursion not mutation; replaced the previously clonal European population",UKCPVS 2021 Annual Report s2.1.3
+2012,,,0,,,,,UKCPVS 2021 Annual Report s2.1.3 (no event described)
+2013,,,1,,,,"Warrior(-) emerged from Warrior after acquiring additional virulence",PLOS One 2025 Warrior(-) subrace differentiation
+2014,,,0,,,,,UKCPVS 2021 Annual Report s2.1.3 (no yellow rust event described)
+2015,,,1,,,1,"Kranich race arrived (later renamed Purple 3); Blue 7 group detected later the same year; an epidemic year followed",UKCPVS 2021 Annual Report s2.1.3
+2016,,,1,,1,,"Red 24 first detected; identified as most likely cause of substantial AHDB Recommended List rating changes that year",UKCPVS 2021 Annual Report s2.1.3
+2017,,,1,,,,"Warrior(-) began diversifying into subraces named after the cultivars they were first found on (Amboise, Benchmark, Kalmar)",PLOS One 2025 Warrior(-) subrace differentiation
+2018,,,0,,,,,UKCPVS 2021 Annual Report s2.1.3 (no event described)
+2019,,,0,,,1,"Unusual outbreak on KWS Zyatt and Dunston in some parts of the country; a Red 27 isolate identified as the likely cause (Red 27 already known, not new)",UKCPVS 2021 Annual Report s2.1.3
+2020,,,1,Yr8 (single isolate),,,"One isolate carried virulence for Yr8 and two for Crusoe; most common pathotypes Red 28 and Red 37. Report frames this as minor",UKCPVS 2021 Annual Report s2.1.3 and s4.1
+2021,,,,,,,"NOT TRANSCRIBED -- the 2021 report covers the 2020 season. The 2021 season is one of the two outbreak years in pest_data.csv and remains unexplained here; read the 2022 report",
+2022,,,,,,,NOT TRANSCRIBED,
+2023,,,,,,,NOT TRANSCRIBED,
+2024,,,,,,,"NOT TRANSCRIBED. Genotyping suggests the Yr15-breaking strain arose by mutation in late 2024 -- i.e. AFTER this season's sample window closed, so this row would not have flagged it",NIAB/JIC genotyping via AHDB news 2025
+2025,257,28,1,Yr15,1,1,"First large-scale Yr15 breakdown recorded globally. Evolved from the Warrior race. First seen late winter/early spring in Northumberland and Tyne and Wear; severe epidemic across northern and eastern England. 36 wheat varieties sampled. AHDB reissued RL ratings early",Davis et al. 2025 New Disease Reports; AHDB news; NIAB UKCPVS spring 2025 poster

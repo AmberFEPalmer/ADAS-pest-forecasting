@@ -1,6 +1,6 @@
 """
 Fungicide timing/decay feature: an engineered replacement for feeding raw
-biennial dose_rate straight into a model (as analysis/xgboost_model.py did
+biennial dose_rate straight into a model (as analysis/s07_features_and_model.py did
 previously).
 
 Two problems with the raw DEFRA figure (data/fungicide_data.csv, see
@@ -8,9 +8,7 @@ analysis/fungicide_audit.py):
 
   1. Coverage is BIENNIAL (even years only, 1990-2024) 
   2. It is a single annual (kg active substance / treated area) aggregate
-     with no application date -- we cannot know exactly when in the season
-     product went on.
-
+     with no application date 
 This module builds two features that address both:
 
   fungicide_smoothed  : an exponential-kernel-weighted average of dose_rate
@@ -26,7 +24,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, "analysis")
-from season_reference import N_DAYS, compute_sow_offsets  # noqa: E402
+from s01_season_reference import N_DAYS, compute_sow_offsets  # noqa: E402
 
 TAU_YEARS = 3.0          # kernel half-width (years) for smoothing across even-year readings
 MAX_GAP_YEARS = 10.0     # beyond this distance from the nearest reading, leave NaN (no extrapolation)
