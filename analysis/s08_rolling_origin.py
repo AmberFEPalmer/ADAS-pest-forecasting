@@ -96,7 +96,7 @@ if __name__ == "__main__":
     print(f"origins {min(origins)}-{max(origins)} "
           f"(forecasting {min(origins)+1}-{max(origins)+1}), seed={SEED}")
 
-    recs = []
+    recs, pred_recs = [], []
     for origin in origins:
         fut = rows[rows.Year == origin + 1]
         if fut.empty:
@@ -120,10 +120,21 @@ if __name__ == "__main__":
                     recs.append({"origin": origin, "forecast_year": origin + 1,
                                  "target": t, "method": name, "n": int(ok.sum()),
                                  "rmse": rmse(p[ok], actual[ok])})
+                ### the per-row forecasts, which the conformal calibration in
+                ### evidence/uncertainty.py needs as its residual pool
+                pred_recs.append(pd.DataFrame({
+                    "forecast_year": origin + 1, "Region": fut.Region.to_numpy(),
+                    "Leaf": fut.Leaf.to_numpy(), "target": t, "method": name,
+                    "observed": actual, "pred": p,
+                }))
         print(f"  origin {origin} -> {origin+1} done", flush=True)
 
     d = pd.DataFrame(recs)
     d.to_csv("analysis/s08_rolling_origin_results.csv", index=False)
+
+    preds = pd.concat(pred_recs, ignore_index=True)
+    preds.to_csv("analysis/s08_rolling_origin_predictions.csv", index=False)
+    print(f"wrote analysis/s08_rolling_origin_predictions.csv: {preds.shape}")
 
     # Pooled RMSE across all forecast years (weighted by rows, not a mean of RMSEs).
     d["sse"] = d.rmse ** 2 * d.n

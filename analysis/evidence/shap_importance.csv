@@ -1,291 +1,291 @@
 target,feature,family,mean_abs_shap_train,mean_abs_shap_test,gain_importance
-Zymoseptoria_tritici_Disease_Severity,Region,region / leaf,0.029919872,0.02734297,0.008531568
-Zymoseptoria_tritici_Disease_Severity,Leaf,region / leaf,0.23267122,0.25282782,0.042052653
-Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_lag1,disease history,0.028852662,0.025448423,0.018871743
-Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Disease_Severity_lag1,disease history,0.0034766588,0.003026775,0.007329073
-Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_lag1,disease history,0.014345437,0.012323959,0.018986166
-Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Crop_Incidence_lag1,disease history,0.0019992264,0.0021404403,0.006039949
-Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_lag2,disease history,0.032248035,0.034663048,0.037571855
-Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Disease_Severity_lag2,disease history,0.0015595073,0.001992554,0.0068646087
-Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_lag2,disease history,0.034829777,0.04175686,0.028398162
-Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Crop_Incidence_lag2,disease history,0.0039104326,0.0043188315,0.009340383
-Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_other_leaf_lag1,disease history,0.0040037907,0.003489614,0.0092999935
-Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Disease_Severity_other_leaf_lag1,disease history,0.00302619,0.00294188,0.004769504
-Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_other_leaf_lag1,disease history,0.007450917,0.00935615,0.010171512
-Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Crop_Incidence_other_leaf_lag1,disease history,0.0033063083,0.003063207,0.010352595
-Zymoseptoria_tritici_Disease_Severity,autumn_mean_temp,seasonal weather,0.035999615,0.032154195,0.017265832
-Zymoseptoria_tritici_Disease_Severity,autumn_total_precip,seasonal weather,0.0021228895,0.002468689,0.005098528
-Zymoseptoria_tritici_Disease_Severity,autumn_rain_days,seasonal weather,0.020114591,0.026828295,0.009999203
-Zymoseptoria_tritici_Disease_Severity,autumn_mean_rh,seasonal weather,0.004204099,0.0036647313,0.0075902604
-Zymoseptoria_tritici_Disease_Severity,autumn_mean_wind,seasonal weather,0.0022006487,0.0029177328,0.0050735353
-Zymoseptoria_tritici_Disease_Severity,winter_mean_temp,seasonal weather,0.0049894718,0.0064774333,0.005870159
-Zymoseptoria_tritici_Disease_Severity,winter_total_precip,seasonal weather,0.011027092,0.012766366,0.008887832
-Zymoseptoria_tritici_Disease_Severity,winter_rain_days,seasonal weather,0.0036163994,0.004234278,0.008910218
-Zymoseptoria_tritici_Disease_Severity,winter_mean_rh,seasonal weather,0.016072065,0.017308522,0.0074709756
-Zymoseptoria_tritici_Disease_Severity,winter_mean_wind,seasonal weather,0.002420628,0.0021531105,0.0058787903
-Zymoseptoria_tritici_Disease_Severity,spring_mean_temp,seasonal weather,0.019143451,0.014830309,0.019722277
-Zymoseptoria_tritici_Disease_Severity,spring_total_precip,seasonal weather,0.0054506254,0.0059047644,0.0076404912
-Zymoseptoria_tritici_Disease_Severity,spring_rain_days,seasonal weather,0.0027576266,0.0032247335,0.0042440295
-Zymoseptoria_tritici_Disease_Severity,spring_mean_rh,seasonal weather,0.07888487,0.089361094,0.029295415
-Zymoseptoria_tritici_Disease_Severity,spring_mean_wind,seasonal weather,0.0025825873,0.0026965193,0.0057140426
-Zymoseptoria_tritici_Disease_Severity,spring_to_june_mean_temp,seasonal weather,0.0018026978,0.0016901022,0.009394479
-Zymoseptoria_tritici_Disease_Severity,spring_to_june_total_precip,seasonal weather,0.0055906037,0.006457375,0.012580784
-Zymoseptoria_tritici_Disease_Severity,spring_to_june_rain_days,seasonal weather,0.0018358892,0.001431321,0.006758218
-Zymoseptoria_tritici_Disease_Severity,spring_to_june_mean_rh,seasonal weather,0.11962761,0.122517094,0.027593914
-Zymoseptoria_tritici_Disease_Severity,spring_to_june_mean_wind,seasonal weather,0.0020643969,0.001982232,0.005465389
-Zymoseptoria_tritici_Disease_Severity,autumn_thermal_time,thermal / wetness / splash,0.012562563,0.011902165,0.019691817
-Zymoseptoria_tritici_Disease_Severity,autumn_wetness_hours,thermal / wetness / splash,0.0038452253,0.0055968575,0.006287114
-Zymoseptoria_tritici_Disease_Severity,autumn_wet_day_frac,thermal / wetness / splash,0.0018765843,0.0034049642,0.0064436547
-Zymoseptoria_tritici_Disease_Severity,autumn_splash_risk,thermal / wetness / splash,0.0023265188,0.0023040003,0.006008335
-Zymoseptoria_tritici_Disease_Severity,winter_thermal_time,thermal / wetness / splash,0.0006862266,0.0008752922,0.0048810006
-Zymoseptoria_tritici_Disease_Severity,winter_wetness_hours,thermal / wetness / splash,0.006726562,0.0073788487,0.009352507
-Zymoseptoria_tritici_Disease_Severity,winter_wet_day_frac,thermal / wetness / splash,0.0012332199,0.001380756,0.0046821386
-Zymoseptoria_tritici_Disease_Severity,winter_splash_risk,thermal / wetness / splash,0.0018872643,0.0024375296,0.004681358
-Zymoseptoria_tritici_Disease_Severity,spring_thermal_time,thermal / wetness / splash,0.004747923,0.0036642025,0.020245817
-Zymoseptoria_tritici_Disease_Severity,spring_wetness_hours,thermal / wetness / splash,0.0062050177,0.007020404,0.011088071
-Zymoseptoria_tritici_Disease_Severity,spring_wet_day_frac,thermal / wetness / splash,0.0067749685,0.006560573,0.009186663
-Zymoseptoria_tritici_Disease_Severity,spring_splash_risk,thermal / wetness / splash,0.004376877,0.004621112,0.0061937543
-Zymoseptoria_tritici_Disease_Severity,spring_to_june_thermal_time,thermal / wetness / splash,0.00028886768,0.000326895,0.0041536405
-Zymoseptoria_tritici_Disease_Severity,spring_to_june_wetness_hours,thermal / wetness / splash,0.018224861,0.01896233,0.02060403
-Zymoseptoria_tritici_Disease_Severity,spring_to_june_wet_day_frac,thermal / wetness / splash,0.0022663784,0.002203349,0.005320168
-Zymoseptoria_tritici_Disease_Severity,spring_to_june_splash_risk,thermal / wetness / splash,0.00085949944,0.00092328154,0.0039214687
-Zymoseptoria_tritici_Disease_Severity,season_total_thermal_time,thermal / wetness / splash,0.008328897,0.0075040027,0.013098175
-Zymoseptoria_tritici_Disease_Severity,season_total_wetness_hours,thermal / wetness / splash,0.0032322588,0.003909082,0.005860171
-Zymoseptoria_tritici_Disease_Severity,season_total_wet_day_frac,thermal / wetness / splash,0.0022935267,0.0022546353,0.0057065915
-Zymoseptoria_tritici_Disease_Severity,season_total_splash_risk,thermal / wetness / splash,0.001030639,0.0009339315,0.0047684885
-Zymoseptoria_tritici_Disease_Severity,fungicide_smoothed,fungicide,0.014858937,0.017384956,0.014597505
-Zymoseptoria_tritici_Disease_Severity,fungicide_decay_dose,fungicide,0.07133865,0.05046905,0.025079364
-Zymoseptoria_tritici_Disease_Severity,fungicide_residual_at_survey,fungicide,0.039811175,0.0326818,0.023162013
-Zymoseptoria_tritici_Disease_Severity,Unknown_ag_12,agronomic,0.00667877,0.0049785716,0.0068862736
-Zymoseptoria_tritici_Disease_Severity,Cereals_ag_8_3,agronomic,0.028232545,0.022653837,0.00847045
-Zymoseptoria_tritici_Disease_Severity,Percentage of fields with wheat thrice in previous 4 years (%)_ag_11,agronomic,0.001145415,0.0015844436,0.005279593
-Zymoseptoria_tritici_Disease_Severity,sow_offset,sowing date,0.0085288,0.0071407566,0.012684827
-Zymoseptoria_tritici_Disease_Severity,prop_anth,land use,0.0022051637,0.004046114,0.004506295
-Zymoseptoria_tritici_Disease_Severity,prop_nature,land use,0.0028611198,0.0041065686,0.0052027623
-Zymoseptoria_tritici_Disease_Severity,gs31_39_days,growth-stage weather,0.001524449,0.0017611024,0.0072779083
-Zymoseptoria_tritici_Disease_Severity,gs31_39_mean_temp,growth-stage weather,0.00556231,0.0057588452,0.0079122055
-Zymoseptoria_tritici_Disease_Severity,gs31_39_total_precip,growth-stage weather,0.011111726,0.011387963,0.011684053
-Zymoseptoria_tritici_Disease_Severity,gs31_39_wetness_hours,growth-stage weather,0.002656613,0.0029283273,0.009938885
-Zymoseptoria_tritici_Disease_Severity,gs31_39_splash_risk,growth-stage weather,0.018758662,0.019098254,0.014446187
-Zymoseptoria_tritici_Disease_Severity,gs39_survey_days,growth-stage weather,0.0057213814,0.005605126,0.013001147
-Zymoseptoria_tritici_Disease_Severity,gs39_survey_mean_temp,growth-stage weather,0.0059049698,0.0064599914,0.005605093
-Zymoseptoria_tritici_Disease_Severity,gs39_survey_total_precip,growth-stage weather,0.07025919,0.081956364,0.04832863
-Zymoseptoria_tritici_Disease_Severity,gs39_survey_wetness_hours,growth-stage weather,0.09661496,0.10263193,0.06690459
-Zymoseptoria_tritici_Disease_Severity,gs39_survey_splash_risk,growth-stage weather,0.054157995,0.05666266,0.058917336
-Zymoseptoria_tritici_Disease_Severity,gs61_survey_days,growth-stage weather,0.009801822,0.008260715,0.0115807485
-Zymoseptoria_tritici_Disease_Severity,gs61_survey_mean_temp,growth-stage weather,0.0070522698,0.0070560398,0.007382095
-Zymoseptoria_tritici_Disease_Severity,gs61_survey_total_precip,growth-stage weather,0.0031887435,0.00308236,0.005860535
-Zymoseptoria_tritici_Disease_Severity,gs61_survey_wetness_hours,growth-stage weather,0.008357137,0.009522529,0.019238528
-Zymoseptoria_tritici_Disease_Severity,gs61_survey_splash_risk,growth-stage weather,0.003535435,0.0038263395,0.0048438194
-Yellow_rust_Disease_Severity,Region,region / leaf,0.004065413,0.0033240984,0.0082454095
-Yellow_rust_Disease_Severity,Leaf,region / leaf,0.00012057538,6.967136e-05,0.0008649558
-Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_lag1,disease history,0.0006817984,0.00072809233,0.005356669
-Yellow_rust_Disease_Severity,Yellow_rust_Disease_Severity_lag1,disease history,0.0019291028,0.0013785256,0.016921228
-Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_lag1,disease history,0.00022574651,0.0002138962,0.011341212
-Yellow_rust_Disease_Severity,Yellow_rust_Crop_Incidence_lag1,disease history,0.00063769735,0.00067707227,0.0024175146
-Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_lag2,disease history,0.009543347,0.0058384715,0.050961237
-Yellow_rust_Disease_Severity,Yellow_rust_Disease_Severity_lag2,disease history,0.0068064732,0.005897116,0.03320325
-Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_lag2,disease history,0.0035446421,0.0021943375,0.024703246
-Yellow_rust_Disease_Severity,Yellow_rust_Crop_Incidence_lag2,disease history,0.011422114,0.011019175,0.030200213
-Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_other_leaf_lag1,disease history,0.00016072478,0.000107557935,0.0017162247
-Yellow_rust_Disease_Severity,Yellow_rust_Disease_Severity_other_leaf_lag1,disease history,0.00083105994,0.0007085794,0.0026602764
-Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_other_leaf_lag1,disease history,0.0011986527,0.0010227411,0.0038345314
-Yellow_rust_Disease_Severity,Yellow_rust_Crop_Incidence_other_leaf_lag1,disease history,0.00073257106,0.00085312437,0.005555371
-Yellow_rust_Disease_Severity,autumn_mean_temp,seasonal weather,0.0065194233,0.00617233,0.011175484
-Yellow_rust_Disease_Severity,autumn_total_precip,seasonal weather,0.0008776689,0.00093454233,0.010043812
-Yellow_rust_Disease_Severity,autumn_rain_days,seasonal weather,0.0010767427,0.00087509846,0.020527061
-Yellow_rust_Disease_Severity,autumn_mean_rh,seasonal weather,0.0005499556,0.0005305082,0.003702324
-Yellow_rust_Disease_Severity,autumn_mean_wind,seasonal weather,0.0017668918,0.00079075556,0.009742585
-Yellow_rust_Disease_Severity,winter_mean_temp,seasonal weather,0.018011753,0.015707353,0.013080893
-Yellow_rust_Disease_Severity,winter_total_precip,seasonal weather,0.004074554,0.0026928172,0.012000002
-Yellow_rust_Disease_Severity,winter_rain_days,seasonal weather,0.00038994843,0.00030571703,0.0055111744
-Yellow_rust_Disease_Severity,winter_mean_rh,seasonal weather,0.0010240042,0.0009088656,0.028010726
-Yellow_rust_Disease_Severity,winter_mean_wind,seasonal weather,0.0014072766,0.00085981813,0.010284882
-Yellow_rust_Disease_Severity,spring_mean_temp,seasonal weather,0.0007276129,0.0005712396,0.00845593
-Yellow_rust_Disease_Severity,spring_total_precip,seasonal weather,0.0010879338,0.0007848729,0.017352123
-Yellow_rust_Disease_Severity,spring_rain_days,seasonal weather,0.010638805,0.010670632,0.021204878
-Yellow_rust_Disease_Severity,spring_mean_rh,seasonal weather,0.0011731356,0.0014064272,0.007087265
-Yellow_rust_Disease_Severity,spring_mean_wind,seasonal weather,0.001000904,0.0009863588,0.0076915147
-Yellow_rust_Disease_Severity,spring_to_june_mean_temp,seasonal weather,0.0014197411,0.0008012954,0.013952756
-Yellow_rust_Disease_Severity,spring_to_june_total_precip,seasonal weather,0.00034378382,0.00024269,0.0075767785
-Yellow_rust_Disease_Severity,spring_to_june_rain_days,seasonal weather,0.00885044,0.0076438272,0.05631721
-Yellow_rust_Disease_Severity,spring_to_june_mean_rh,seasonal weather,0.0003612674,0.00027652463,0.004550918
-Yellow_rust_Disease_Severity,spring_to_june_mean_wind,seasonal weather,0.0002837798,0.00019773368,0.011315848
-Yellow_rust_Disease_Severity,autumn_thermal_time,thermal / wetness / splash,0.0018897321,0.0018563637,0.010566145
-Yellow_rust_Disease_Severity,autumn_wetness_hours,thermal / wetness / splash,5.9425132e-05,6.399059e-05,0.0002843324
-Yellow_rust_Disease_Severity,autumn_wet_day_frac,thermal / wetness / splash,0.000112575224,0.0001210736,0.00091756927
-Yellow_rust_Disease_Severity,autumn_splash_risk,thermal / wetness / splash,0.001161724,0.0011860975,0.0045085023
-Yellow_rust_Disease_Severity,winter_thermal_time,thermal / wetness / splash,0.0059930207,0.0043976284,0.016305458
-Yellow_rust_Disease_Severity,winter_wetness_hours,thermal / wetness / splash,0.010819176,0.010147154,0.01657577
-Yellow_rust_Disease_Severity,winter_wet_day_frac,thermal / wetness / splash,0.0017235063,0.0014214583,0.031781923
-Yellow_rust_Disease_Severity,winter_splash_risk,thermal / wetness / splash,0.004153411,0.0038525902,0.00550089
-Yellow_rust_Disease_Severity,spring_thermal_time,thermal / wetness / splash,0.0003105838,0.0002650266,0.005958586
-Yellow_rust_Disease_Severity,spring_wetness_hours,thermal / wetness / splash,0.0060979347,0.005101463,0.011863189
-Yellow_rust_Disease_Severity,spring_wet_day_frac,thermal / wetness / splash,0.0015265837,0.0010433177,0.020299707
-Yellow_rust_Disease_Severity,spring_splash_risk,thermal / wetness / splash,0.001029067,0.0005727497,0.019823324
-Yellow_rust_Disease_Severity,spring_to_june_thermal_time,thermal / wetness / splash,0.00035931147,0.00019509386,0.0176408
-Yellow_rust_Disease_Severity,spring_to_june_wetness_hours,thermal / wetness / splash,0.0068862163,0.006787577,0.061019324
-Yellow_rust_Disease_Severity,spring_to_june_wet_day_frac,thermal / wetness / splash,0.0021011739,0.00133473,0.023576576
-Yellow_rust_Disease_Severity,spring_to_june_splash_risk,thermal / wetness / splash,0.0010277961,0.00084936747,0.0062732
-Yellow_rust_Disease_Severity,season_total_thermal_time,thermal / wetness / splash,0.0012852545,0.0012771704,0.019463487
-Yellow_rust_Disease_Severity,season_total_wetness_hours,thermal / wetness / splash,0.00062103465,0.0005094298,0.011158515
-Yellow_rust_Disease_Severity,season_total_wet_day_frac,thermal / wetness / splash,0.00023241884,0.00014139722,0.004723438
-Yellow_rust_Disease_Severity,season_total_splash_risk,thermal / wetness / splash,0.0014724009,0.0012249005,0.01161
-Yellow_rust_Disease_Severity,fungicide_smoothed,fungicide,0.027133781,0.024340656,0.040800124
-Yellow_rust_Disease_Severity,fungicide_decay_dose,fungicide,0.009319613,0.0063988483,0.0130306035
-Yellow_rust_Disease_Severity,fungicide_residual_at_survey,fungicide,0.0037275725,0.0035584215,0.02195532
-Yellow_rust_Disease_Severity,Unknown_ag_12,agronomic,0.00045665717,0.0005647885,0.0075644045
-Yellow_rust_Disease_Severity,Cereals_ag_8_3,agronomic,0.0036041834,0.0016079992,0.013725961
-Yellow_rust_Disease_Severity,Percentage of fields with wheat thrice in previous 4 years (%)_ag_11,agronomic,0.00093902147,0.0008773499,0.006264343
-Yellow_rust_Disease_Severity,sow_offset,sowing date,0.000898676,0.00078325503,0.010490943
-Yellow_rust_Disease_Severity,prop_anth,land use,0.0054428247,0.003218792,0.008545756
-Yellow_rust_Disease_Severity,prop_nature,land use,0.011233396,0.006215141,0.013482322
-Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_natl_lag1,spatial spread,0.001985769,0.0012996641,0.017799327
-Yellow_rust_Disease_Severity,Yellow_rust_Disease_Severity_natl_lag1,spatial spread,0.026872724,0.024949837,0.033680737
-Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_natl_lag1,spatial spread,0.0007976137,0.0006507688,0.0071822843
-Yellow_rust_Disease_Severity,Yellow_rust_Crop_Incidence_natl_lag1,spatial spread,0.0034359563,0.0033858393,0.028061608
-Zymoseptoria_tritici_Crop_Incidence,Region,region / leaf,0.75737584,0.59266144,0.0054968684
-Zymoseptoria_tritici_Crop_Incidence,Leaf,region / leaf,7.942643,7.90849,0.031547766
-Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_lag1,disease history,1.2813814,0.7619742,0.01991623
-Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Disease_Severity_lag1,disease history,0.16053918,0.16769531,0.0040821643
-Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_lag1,disease history,0.78070575,0.68156976,0.018043982
-Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Crop_Incidence_lag1,disease history,0.2712254,0.15191332,0.020184347
-Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_lag2,disease history,0.46850896,0.46271223,0.016638115
-Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Disease_Severity_lag2,disease history,0.065329,0.046398915,0.0060626063
-Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_lag2,disease history,1.5942819,1.5805159,0.026035953
-Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Crop_Incidence_lag2,disease history,0.854225,0.6354371,0.020450756
-Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_other_leaf_lag1,disease history,0.2678787,0.19838443,0.0046028
-Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Disease_Severity_other_leaf_lag1,disease history,0.3101122,0.27060682,0.006768766
-Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_other_leaf_lag1,disease history,0.16431837,0.17720714,0.0049226666
-Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Crop_Incidence_other_leaf_lag1,disease history,0.72413564,0.51279664,0.020671401
-Zymoseptoria_tritici_Crop_Incidence,autumn_mean_temp,seasonal weather,1.0512311,1.016998,0.00853721
-Zymoseptoria_tritici_Crop_Incidence,autumn_total_precip,seasonal weather,0.08325405,0.06798724,0.0045066616
-Zymoseptoria_tritici_Crop_Incidence,autumn_rain_days,seasonal weather,0.43793535,0.4949996,0.0072343326
-Zymoseptoria_tritici_Crop_Incidence,autumn_mean_rh,seasonal weather,0.039864134,0.041440297,0.0031777397
-Zymoseptoria_tritici_Crop_Incidence,autumn_mean_wind,seasonal weather,0.058285594,0.04967964,0.0040482455
-Zymoseptoria_tritici_Crop_Incidence,winter_mean_temp,seasonal weather,0.22548461,0.2771287,0.0053006364
-Zymoseptoria_tritici_Crop_Incidence,winter_total_precip,seasonal weather,0.038882725,0.03346304,0.0059998045
-Zymoseptoria_tritici_Crop_Incidence,winter_rain_days,seasonal weather,0.029953176,0.022760492,0.0037806344
-Zymoseptoria_tritici_Crop_Incidence,winter_mean_rh,seasonal weather,0.7057256,0.945491,0.0075740204
-Zymoseptoria_tritici_Crop_Incidence,winter_mean_wind,seasonal weather,0.041996315,0.033713546,0.0037652396
-Zymoseptoria_tritici_Crop_Incidence,spring_mean_temp,seasonal weather,0.3647956,0.3366287,0.009179167
-Zymoseptoria_tritici_Crop_Incidence,spring_total_precip,seasonal weather,0.1255916,0.1560376,0.007857071
-Zymoseptoria_tritici_Crop_Incidence,spring_rain_days,seasonal weather,0.06836859,0.07515026,0.006537317
-Zymoseptoria_tritici_Crop_Incidence,spring_mean_rh,seasonal weather,0.91075766,0.93664104,0.011830473
-Zymoseptoria_tritici_Crop_Incidence,spring_mean_wind,seasonal weather,0.19856802,0.21365967,0.0050223386
-Zymoseptoria_tritici_Crop_Incidence,spring_to_june_mean_temp,seasonal weather,0.061995827,0.05526019,0.004037407
-Zymoseptoria_tritici_Crop_Incidence,spring_to_june_total_precip,seasonal weather,0.23326576,0.22958264,0.010644896
-Zymoseptoria_tritici_Crop_Incidence,spring_to_june_rain_days,seasonal weather,0.054916184,0.043367095,0.006422461
-Zymoseptoria_tritici_Crop_Incidence,spring_to_june_mean_rh,seasonal weather,2.7546918,2.5909212,0.019208267
-Zymoseptoria_tritici_Crop_Incidence,spring_to_june_mean_wind,seasonal weather,0.05558591,0.054986894,0.003167098
-Zymoseptoria_tritici_Crop_Incidence,autumn_thermal_time,thermal / wetness / splash,0.27099773,0.23737231,0.00980733
-Zymoseptoria_tritici_Crop_Incidence,autumn_wetness_hours,thermal / wetness / splash,0.2001687,0.27777514,0.006168143
-Zymoseptoria_tritici_Crop_Incidence,autumn_wet_day_frac,thermal / wetness / splash,0.19042256,0.23411205,0.0053972737
-Zymoseptoria_tritici_Crop_Incidence,autumn_splash_risk,thermal / wetness / splash,0.042208113,0.047476143,0.003580227
-Zymoseptoria_tritici_Crop_Incidence,winter_thermal_time,thermal / wetness / splash,0.10654827,0.14950612,0.0047523095
-Zymoseptoria_tritici_Crop_Incidence,winter_wetness_hours,thermal / wetness / splash,0.13200383,0.13178273,0.0052768486
-Zymoseptoria_tritici_Crop_Incidence,winter_wet_day_frac,thermal / wetness / splash,0.13037094,0.1231731,0.0059764963
-Zymoseptoria_tritici_Crop_Incidence,winter_splash_risk,thermal / wetness / splash,0.16177703,0.16049758,0.0034590191
-Zymoseptoria_tritici_Crop_Incidence,spring_thermal_time,thermal / wetness / splash,0.14265606,0.11696477,0.010828933
-Zymoseptoria_tritici_Crop_Incidence,spring_wetness_hours,thermal / wetness / splash,0.43624926,0.3906588,0.014885632
-Zymoseptoria_tritici_Crop_Incidence,spring_wet_day_frac,thermal / wetness / splash,0.56724346,0.48029622,0.008321795
-Zymoseptoria_tritici_Crop_Incidence,spring_splash_risk,thermal / wetness / splash,0.21625762,0.19376895,0.010704097
-Zymoseptoria_tritici_Crop_Incidence,spring_to_june_thermal_time,thermal / wetness / splash,0.0077709495,0.010645957,0.0015672399
-Zymoseptoria_tritici_Crop_Incidence,spring_to_june_wetness_hours,thermal / wetness / splash,0.40435982,0.40353674,0.015910398
-Zymoseptoria_tritici_Crop_Incidence,spring_to_june_wet_day_frac,thermal / wetness / splash,0.17135473,0.18497705,0.009180343
-Zymoseptoria_tritici_Crop_Incidence,spring_to_june_splash_risk,thermal / wetness / splash,0.08609752,0.098184034,0.007923901
-Zymoseptoria_tritici_Crop_Incidence,season_total_thermal_time,thermal / wetness / splash,0.31815824,0.3457119,0.008410598
-Zymoseptoria_tritici_Crop_Incidence,season_total_wetness_hours,thermal / wetness / splash,0.11547945,0.11802168,0.0069495104
-Zymoseptoria_tritici_Crop_Incidence,season_total_wet_day_frac,thermal / wetness / splash,0.06959979,0.08707983,0.0044955923
-Zymoseptoria_tritici_Crop_Incidence,season_total_splash_risk,thermal / wetness / splash,0.23412469,0.17204133,0.0057709087
-Zymoseptoria_tritici_Crop_Incidence,fungicide_smoothed,fungicide,1.8057592,1.5342041,0.048294134
-Zymoseptoria_tritici_Crop_Incidence,fungicide_decay_dose,fungicide,7.9698257,6.3776784,0.12094653
-Zymoseptoria_tritici_Crop_Incidence,fungicide_residual_at_survey,fungicide,1.2692868,1.0515076,0.028457543
-Zymoseptoria_tritici_Crop_Incidence,Unknown_ag_12,agronomic,0.30228376,0.3475195,0.015247285
-Zymoseptoria_tritici_Crop_Incidence,Cereals_ag_8_3,agronomic,0.66201144,0.87200034,0.006414263
-Zymoseptoria_tritici_Crop_Incidence,Percentage of fields with wheat thrice in previous 4 years (%)_ag_11,agronomic,0.21655016,0.21883538,0.008966481
-Zymoseptoria_tritici_Crop_Incidence,sow_offset,sowing date,0.60715735,0.4756472,0.031666987
-Zymoseptoria_tritici_Crop_Incidence,prop_anth,land use,0.15027052,0.0866542,0.0036990151
-Zymoseptoria_tritici_Crop_Incidence,prop_nature,land use,0.11041274,0.13100585,0.0056877765
-Zymoseptoria_tritici_Crop_Incidence,gs31_39_days,growth-stage weather,0.05831926,0.07244473,0.0039565163
-Zymoseptoria_tritici_Crop_Incidence,gs31_39_mean_temp,growth-stage weather,0.28385895,0.3212765,0.0046879738
-Zymoseptoria_tritici_Crop_Incidence,gs31_39_total_precip,growth-stage weather,0.69757473,0.6475909,0.012409555
-Zymoseptoria_tritici_Crop_Incidence,gs31_39_wetness_hours,growth-stage weather,0.17168283,0.09951564,0.016889473
-Zymoseptoria_tritici_Crop_Incidence,gs31_39_splash_risk,growth-stage weather,0.4957892,0.42784524,0.013743406
-Zymoseptoria_tritici_Crop_Incidence,gs39_survey_days,growth-stage weather,0.06290947,0.050821017,0.0056140446
-Zymoseptoria_tritici_Crop_Incidence,gs39_survey_mean_temp,growth-stage weather,0.15990166,0.14706758,0.006459712
-Zymoseptoria_tritici_Crop_Incidence,gs39_survey_total_precip,growth-stage weather,2.257497,2.7100537,0.048687622
-Zymoseptoria_tritici_Crop_Incidence,gs39_survey_wetness_hours,growth-stage weather,4.7363806,4.8015738,0.051523466
-Zymoseptoria_tritici_Crop_Incidence,gs39_survey_splash_risk,growth-stage weather,2.4903245,2.7857287,0.047364466
-Zymoseptoria_tritici_Crop_Incidence,gs61_survey_days,growth-stage weather,0.24330696,0.26761812,0.005722488
-Zymoseptoria_tritici_Crop_Incidence,gs61_survey_mean_temp,growth-stage weather,0.45338517,0.5866341,0.0064544245
-Zymoseptoria_tritici_Crop_Incidence,gs61_survey_total_precip,growth-stage weather,0.08838318,0.07228682,0.00402029
-Zymoseptoria_tritici_Crop_Incidence,gs61_survey_wetness_hours,growth-stage weather,0.112218544,0.111818925,0.0061388137
-Zymoseptoria_tritici_Crop_Incidence,gs61_survey_splash_risk,growth-stage weather,0.32818452,0.35312122,0.0043256744
-Yellow_rust_Crop_Incidence,Region,region / leaf,0.3142702,0.19385922,0.010200528
+Zymoseptoria_tritici_Disease_Severity,Region,region / leaf,0.02336808,0.021097515,0.0078841485
+Zymoseptoria_tritici_Disease_Severity,Leaf,region / leaf,0.22871709,0.2481771,0.039808296
+Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_lag1,disease history,0.028898086,0.02593008,0.018921927
+Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Disease_Severity_lag1,disease history,0.0029683735,0.0029392282,0.008464501
+Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_lag1,disease history,0.014865419,0.012402119,0.022124493
+Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Crop_Incidence_lag1,disease history,0.0023504184,0.0027527257,0.007985373
+Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_lag2,disease history,0.034525212,0.0380399,0.032875
+Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Disease_Severity_lag2,disease history,0.0019321183,0.0024910066,0.0060040117
+Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_lag2,disease history,0.035790987,0.043033235,0.027305076
+Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Crop_Incidence_lag2,disease history,0.004550572,0.0049119922,0.0068726153
+Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_other_leaf_lag1,disease history,0.004296392,0.0037742772,0.011153924
+Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Disease_Severity_other_leaf_lag1,disease history,0.0018998472,0.0016883932,0.005252796
+Zymoseptoria_tritici_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_other_leaf_lag1,disease history,0.009351699,0.011544838,0.009617309
+Zymoseptoria_tritici_Disease_Severity,Yellow_rust_Crop_Incidence_other_leaf_lag1,disease history,0.0034349903,0.0032537815,0.007542995
+Zymoseptoria_tritici_Disease_Severity,autumn_mean_temp,seasonal weather,0.036189344,0.032667775,0.018050045
+Zymoseptoria_tritici_Disease_Severity,autumn_total_precip,seasonal weather,0.0025346826,0.0030350203,0.005808604
+Zymoseptoria_tritici_Disease_Severity,autumn_rain_days,seasonal weather,0.018886637,0.024718964,0.008917752
+Zymoseptoria_tritici_Disease_Severity,autumn_mean_rh,seasonal weather,0.0022833261,0.0020792251,0.005522037
+Zymoseptoria_tritici_Disease_Severity,autumn_mean_wind,seasonal weather,0.0029440247,0.003685455,0.006756858
+Zymoseptoria_tritici_Disease_Severity,winter_mean_temp,seasonal weather,0.0038744067,0.0055503473,0.0057205684
+Zymoseptoria_tritici_Disease_Severity,winter_total_precip,seasonal weather,0.007599822,0.009001499,0.007989997
+Zymoseptoria_tritici_Disease_Severity,winter_rain_days,seasonal weather,0.0033037502,0.0040054275,0.0074065477
+Zymoseptoria_tritici_Disease_Severity,winter_mean_rh,seasonal weather,0.018951396,0.01979126,0.00785763
+Zymoseptoria_tritici_Disease_Severity,winter_mean_wind,seasonal weather,0.002245558,0.0020934783,0.0068734637
+Zymoseptoria_tritici_Disease_Severity,spring_mean_temp,seasonal weather,0.016327422,0.013362167,0.017381733
+Zymoseptoria_tritici_Disease_Severity,spring_total_precip,seasonal weather,0.006782256,0.006543024,0.008384071
+Zymoseptoria_tritici_Disease_Severity,spring_rain_days,seasonal weather,0.0016993523,0.0020020362,0.0057768277
+Zymoseptoria_tritici_Disease_Severity,spring_mean_rh,seasonal weather,0.071881495,0.08008964,0.025646916
+Zymoseptoria_tritici_Disease_Severity,spring_mean_wind,seasonal weather,0.0026709356,0.002563103,0.0069794552
+Zymoseptoria_tritici_Disease_Severity,spring_to_june_mean_temp,seasonal weather,0.0042716824,0.0037699665,0.018848244
+Zymoseptoria_tritici_Disease_Severity,spring_to_june_total_precip,seasonal weather,0.0014423756,0.0016293514,0.0061525023
+Zymoseptoria_tritici_Disease_Severity,spring_to_june_rain_days,seasonal weather,0.0013731176,0.0014999982,0.0066661434
+Zymoseptoria_tritici_Disease_Severity,spring_to_june_mean_rh,seasonal weather,0.1285867,0.14209834,0.028771266
+Zymoseptoria_tritici_Disease_Severity,spring_to_june_mean_wind,seasonal weather,0.0015881269,0.0017609369,0.009359783
+Zymoseptoria_tritici_Disease_Severity,autumn_thermal_time,thermal / wetness / splash,0.011556955,0.009986684,0.015651044
+Zymoseptoria_tritici_Disease_Severity,autumn_wetness_hours,thermal / wetness / splash,0.004196748,0.0065523773,0.0062147537
+Zymoseptoria_tritici_Disease_Severity,autumn_wet_day_frac,thermal / wetness / splash,0.0018102399,0.0028700826,0.007533864
+Zymoseptoria_tritici_Disease_Severity,autumn_splash_risk,thermal / wetness / splash,0.0028737627,0.00283152,0.0049796687
+Zymoseptoria_tritici_Disease_Severity,winter_thermal_time,thermal / wetness / splash,0.0017706339,0.0017663181,0.005243587
+Zymoseptoria_tritici_Disease_Severity,winter_wetness_hours,thermal / wetness / splash,0.0062030456,0.006913093,0.007693003
+Zymoseptoria_tritici_Disease_Severity,winter_wet_day_frac,thermal / wetness / splash,0.00076713075,0.00075136806,0.004142727
+Zymoseptoria_tritici_Disease_Severity,winter_splash_risk,thermal / wetness / splash,0.0027667661,0.0036519244,0.004231983
+Zymoseptoria_tritici_Disease_Severity,spring_thermal_time,thermal / wetness / splash,0.0039790953,0.0033717745,0.024021585
+Zymoseptoria_tritici_Disease_Severity,spring_wetness_hours,thermal / wetness / splash,0.003564763,0.0038174703,0.008123128
+Zymoseptoria_tritici_Disease_Severity,spring_wet_day_frac,thermal / wetness / splash,0.0056009935,0.005368984,0.008644968
+Zymoseptoria_tritici_Disease_Severity,spring_splash_risk,thermal / wetness / splash,0.004905519,0.004968087,0.005850299
+Zymoseptoria_tritici_Disease_Severity,spring_to_june_thermal_time,thermal / wetness / splash,0.0010618765,0.0008527657,0.016842714
+Zymoseptoria_tritici_Disease_Severity,spring_to_june_wetness_hours,thermal / wetness / splash,0.004085358,0.0050539486,0.007738851
+Zymoseptoria_tritici_Disease_Severity,spring_to_june_wet_day_frac,thermal / wetness / splash,0.007209877,0.008077005,0.008950574
+Zymoseptoria_tritici_Disease_Severity,spring_to_june_splash_risk,thermal / wetness / splash,0.0019223627,0.0022846484,0.0065254853
+Zymoseptoria_tritici_Disease_Severity,season_total_thermal_time,thermal / wetness / splash,0.0064362152,0.005550053,0.012370857
+Zymoseptoria_tritici_Disease_Severity,season_total_wetness_hours,thermal / wetness / splash,0.002597221,0.0031774864,0.0058041755
+Zymoseptoria_tritici_Disease_Severity,season_total_wet_day_frac,thermal / wetness / splash,0.0009699451,0.0011745224,0.0065602288
+Zymoseptoria_tritici_Disease_Severity,season_total_splash_risk,thermal / wetness / splash,0.0015552405,0.0012927756,0.008836211
+Zymoseptoria_tritici_Disease_Severity,fungicide_smoothed,fungicide,0.013948346,0.015073094,0.013717895
+Zymoseptoria_tritici_Disease_Severity,fungicide_decay_dose,fungicide,0.063755445,0.04692374,0.0243267
+Zymoseptoria_tritici_Disease_Severity,fungicide_residual_at_survey,fungicide,0.044289988,0.03604521,0.022683125
+Zymoseptoria_tritici_Disease_Severity,Unknown_ag_12,agronomic,0.006502728,0.005592805,0.008410722
+Zymoseptoria_tritici_Disease_Severity,Cereals_ag_8_3,agronomic,0.026894618,0.01814647,0.008298948
+Zymoseptoria_tritici_Disease_Severity,Percentage of fields with wheat thrice in previous 4 years (%)_ag_11,agronomic,0.0016775087,0.002171858,0.0039047159
+Zymoseptoria_tritici_Disease_Severity,sow_offset,sowing date,0.011178164,0.0092051225,0.012494074
+Zymoseptoria_tritici_Disease_Severity,prop_anth,land use,0.001753536,0.0031834797,0.0043006656
+Zymoseptoria_tritici_Disease_Severity,prop_nature,land use,0.0036384396,0.0052504884,0.005318885
+Zymoseptoria_tritici_Disease_Severity,gs31_39_days,growth-stage weather,0.0018285441,0.0019291682,0.006958979
+Zymoseptoria_tritici_Disease_Severity,gs31_39_mean_temp,growth-stage weather,0.0054687113,0.005579319,0.006138396
+Zymoseptoria_tritici_Disease_Severity,gs31_39_total_precip,growth-stage weather,0.016479822,0.017324034,0.012382807
+Zymoseptoria_tritici_Disease_Severity,gs31_39_wetness_hours,growth-stage weather,0.002299045,0.0027061538,0.0094827395
+Zymoseptoria_tritici_Disease_Severity,gs31_39_splash_risk,growth-stage weather,0.015856864,0.015932282,0.014749808
+Zymoseptoria_tritici_Disease_Severity,gs39_survey_days,growth-stage weather,0.0069531365,0.006733687,0.021104995
+Zymoseptoria_tritici_Disease_Severity,gs39_survey_mean_temp,growth-stage weather,0.0062001557,0.00619262,0.0056548766
+Zymoseptoria_tritici_Disease_Severity,gs39_survey_total_precip,growth-stage weather,0.07432148,0.08554319,0.047371328
+Zymoseptoria_tritici_Disease_Severity,gs39_survey_wetness_hours,growth-stage weather,0.092619665,0.0951883,0.061401755
+Zymoseptoria_tritici_Disease_Severity,gs39_survey_splash_risk,growth-stage weather,0.057583846,0.059356987,0.054654263
+Zymoseptoria_tritici_Disease_Severity,gs61_survey_days,growth-stage weather,0.008613714,0.0073701413,0.019667424
+Zymoseptoria_tritici_Disease_Severity,gs61_survey_mean_temp,growth-stage weather,0.006758596,0.006696002,0.007004539
+Zymoseptoria_tritici_Disease_Severity,gs61_survey_total_precip,growth-stage weather,0.0032444499,0.003422565,0.0056379163
+Zymoseptoria_tritici_Disease_Severity,gs61_survey_wetness_hours,growth-stage weather,0.008985601,0.010179784,0.017498946
+Zymoseptoria_tritici_Disease_Severity,gs61_survey_splash_risk,growth-stage weather,0.0031844624,0.003167721,0.004192843
+Yellow_rust_Disease_Severity,Region,region / leaf,0.0047952174,0.0037911043,0.0074327784
+Yellow_rust_Disease_Severity,Leaf,region / leaf,4.0128256e-05,2.4705188e-05,0.00040518265
+Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_lag1,disease history,0.00062246824,0.00057306583,0.013410071
+Yellow_rust_Disease_Severity,Yellow_rust_Disease_Severity_lag1,disease history,0.0018326838,0.0013063208,0.0070650345
+Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_lag1,disease history,0.00036814174,0.0002783957,0.003540347
+Yellow_rust_Disease_Severity,Yellow_rust_Crop_Incidence_lag1,disease history,0.00046449876,0.00049134676,0.0038227583
+Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_lag2,disease history,0.006261822,0.0033258363,0.060838707
+Yellow_rust_Disease_Severity,Yellow_rust_Disease_Severity_lag2,disease history,0.004886405,0.004349576,0.02604196
+Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_lag2,disease history,0.0042825514,0.002263339,0.026415354
+Yellow_rust_Disease_Severity,Yellow_rust_Crop_Incidence_lag2,disease history,0.008756191,0.0077906414,0.028744558
+Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_other_leaf_lag1,disease history,0.00015529856,0.00014895447,0.0030158565
+Yellow_rust_Disease_Severity,Yellow_rust_Disease_Severity_other_leaf_lag1,disease history,0.0008039849,0.00062815344,0.0025350875
+Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_other_leaf_lag1,disease history,0.0017701045,0.00145434,0.005480915
+Yellow_rust_Disease_Severity,Yellow_rust_Crop_Incidence_other_leaf_lag1,disease history,0.00046436503,0.000522953,0.0035434891
+Yellow_rust_Disease_Severity,autumn_mean_temp,seasonal weather,0.0064139166,0.0062137176,0.01000057
+Yellow_rust_Disease_Severity,autumn_total_precip,seasonal weather,0.0005896691,0.0006295288,0.013328187
+Yellow_rust_Disease_Severity,autumn_rain_days,seasonal weather,0.00091587583,0.0009446715,0.02013297
+Yellow_rust_Disease_Severity,autumn_mean_rh,seasonal weather,0.00053025107,0.00040391265,0.0038623572
+Yellow_rust_Disease_Severity,autumn_mean_wind,seasonal weather,0.0023196556,0.00093107356,0.013728316
+Yellow_rust_Disease_Severity,winter_mean_temp,seasonal weather,0.018890487,0.016555961,0.013318541
+Yellow_rust_Disease_Severity,winter_total_precip,seasonal weather,0.002601969,0.0021238965,0.007985136
+Yellow_rust_Disease_Severity,winter_rain_days,seasonal weather,0.00061975466,0.0004732075,0.0048052478
+Yellow_rust_Disease_Severity,winter_mean_rh,seasonal weather,0.0010435438,0.00092274306,0.009167548
+Yellow_rust_Disease_Severity,winter_mean_wind,seasonal weather,0.0013091748,0.0007179944,0.010028871
+Yellow_rust_Disease_Severity,spring_mean_temp,seasonal weather,0.0006596931,0.00048564086,0.008609032
+Yellow_rust_Disease_Severity,spring_total_precip,seasonal weather,0.00078719325,0.0006981952,0.026855972
+Yellow_rust_Disease_Severity,spring_rain_days,seasonal weather,0.0053230906,0.0054960153,0.016537115
+Yellow_rust_Disease_Severity,spring_mean_rh,seasonal weather,0.000757225,0.0011562684,0.005861231
+Yellow_rust_Disease_Severity,spring_mean_wind,seasonal weather,0.0010172469,0.00086472987,0.008618911
+Yellow_rust_Disease_Severity,spring_to_june_mean_temp,seasonal weather,0.0012683016,0.0007306154,0.015476877
+Yellow_rust_Disease_Severity,spring_to_june_total_precip,seasonal weather,0.0018623894,0.0011866186,0.016042763
+Yellow_rust_Disease_Severity,spring_to_june_rain_days,seasonal weather,0.018491033,0.015752265,0.04185729
+Yellow_rust_Disease_Severity,spring_to_june_mean_rh,seasonal weather,0.0010009129,0.00063780206,0.008105783
+Yellow_rust_Disease_Severity,spring_to_june_mean_wind,seasonal weather,0.0004327396,0.00058030826,0.004177559
+Yellow_rust_Disease_Severity,autumn_thermal_time,thermal / wetness / splash,0.0022156578,0.0022051646,0.009414421
+Yellow_rust_Disease_Severity,autumn_wetness_hours,thermal / wetness / splash,0.00019342586,0.00019429224,0.0026641502
+Yellow_rust_Disease_Severity,autumn_wet_day_frac,thermal / wetness / splash,0.000121689125,9.7908174e-05,0.0012628679
+Yellow_rust_Disease_Severity,autumn_splash_risk,thermal / wetness / splash,0.0011232235,0.0010704718,0.007608763
+Yellow_rust_Disease_Severity,winter_thermal_time,thermal / wetness / splash,0.006199611,0.004953471,0.014091969
+Yellow_rust_Disease_Severity,winter_wetness_hours,thermal / wetness / splash,0.008863326,0.008301752,0.01560955
+Yellow_rust_Disease_Severity,winter_wet_day_frac,thermal / wetness / splash,0.0014180671,0.0010966044,0.02802054
+Yellow_rust_Disease_Severity,winter_splash_risk,thermal / wetness / splash,0.003619132,0.0034331356,0.005613896
+Yellow_rust_Disease_Severity,spring_thermal_time,thermal / wetness / splash,2.634807e-05,2.9270794e-05,0.0003635913
+Yellow_rust_Disease_Severity,spring_wetness_hours,thermal / wetness / splash,0.0014632774,0.0012488093,0.006964774
+Yellow_rust_Disease_Severity,spring_wet_day_frac,thermal / wetness / splash,5.5181055e-05,2.6504797e-05,0.003011637
+Yellow_rust_Disease_Severity,spring_splash_risk,thermal / wetness / splash,0.001671323,0.0013621304,0.054610617
+Yellow_rust_Disease_Severity,spring_to_june_thermal_time,thermal / wetness / splash,0.0002546295,0.0001716195,0.007664509
+Yellow_rust_Disease_Severity,spring_to_june_wetness_hours,thermal / wetness / splash,0.012860438,0.013736171,0.055027068
+Yellow_rust_Disease_Severity,spring_to_june_wet_day_frac,thermal / wetness / splash,0.00656263,0.004499051,0.044639565
+Yellow_rust_Disease_Severity,spring_to_june_splash_risk,thermal / wetness / splash,0.00303449,0.0027060353,0.022099217
+Yellow_rust_Disease_Severity,season_total_thermal_time,thermal / wetness / splash,0.0017850759,0.0015049867,0.015154677
+Yellow_rust_Disease_Severity,season_total_wetness_hours,thermal / wetness / splash,0.0011252238,0.00091635075,0.01137034
+Yellow_rust_Disease_Severity,season_total_wet_day_frac,thermal / wetness / splash,0.0001912859,0.00015624322,0.0030051891
+Yellow_rust_Disease_Severity,season_total_splash_risk,thermal / wetness / splash,0.0006987463,0.0006547397,0.0062066643
+Yellow_rust_Disease_Severity,fungicide_smoothed,fungicide,0.026757663,0.023299886,0.032728806
+Yellow_rust_Disease_Severity,fungicide_decay_dose,fungicide,0.008093938,0.0058626374,0.01461902
+Yellow_rust_Disease_Severity,fungicide_residual_at_survey,fungicide,0.002968011,0.002983424,0.016949862
+Yellow_rust_Disease_Severity,Unknown_ag_12,agronomic,0.0005388863,0.00064405636,0.008367654
+Yellow_rust_Disease_Severity,Cereals_ag_8_3,agronomic,0.0025177621,0.001055318,0.015118189
+Yellow_rust_Disease_Severity,Percentage of fields with wheat thrice in previous 4 years (%)_ag_11,agronomic,0.001249006,0.0011718457,0.0041441745
+Yellow_rust_Disease_Severity,sow_offset,sowing date,0.0010280292,0.001192645,0.015703391
+Yellow_rust_Disease_Severity,prop_anth,land use,0.00504589,0.0031520636,0.007763806
+Yellow_rust_Disease_Severity,prop_nature,land use,0.011596269,0.0064430637,0.013379989
+Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Disease_Severity_natl_lag1,spatial spread,0.002265458,0.001630345,0.01002924
+Yellow_rust_Disease_Severity,Yellow_rust_Disease_Severity_natl_lag1,spatial spread,0.028913423,0.027228901,0.030917635
+Yellow_rust_Disease_Severity,Zymoseptoria_tritici_Crop_Incidence_natl_lag1,spatial spread,0.0005534104,0.00036708504,0.004614985
+Yellow_rust_Disease_Severity,Yellow_rust_Crop_Incidence_natl_lag1,spatial spread,0.006524072,0.006023113,0.060466826
+Zymoseptoria_tritici_Crop_Incidence,Region,region / leaf,0.69231117,0.5477196,0.00496635
+Zymoseptoria_tritici_Crop_Incidence,Leaf,region / leaf,7.980278,7.865209,0.032401506
+Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_lag1,disease history,1.3341092,0.8130318,0.021214556
+Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Disease_Severity_lag1,disease history,0.17116284,0.18264554,0.0033153542
+Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_lag1,disease history,0.7491139,0.6274315,0.017326992
+Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Crop_Incidence_lag1,disease history,0.2764016,0.16945776,0.015288474
+Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_lag2,disease history,0.47086936,0.4396088,0.018755293
+Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Disease_Severity_lag2,disease history,0.06279285,0.060839962,0.005711394
+Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_lag2,disease history,1.6792942,1.6624794,0.027611759
+Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Crop_Incidence_lag2,disease history,1.0210104,0.76151216,0.020303052
+Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_other_leaf_lag1,disease history,0.32024541,0.23926835,0.0047760755
+Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Disease_Severity_other_leaf_lag1,disease history,0.3327301,0.27880412,0.0066721775
+Zymoseptoria_tritici_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_other_leaf_lag1,disease history,0.23711257,0.27298778,0.0049924785
+Zymoseptoria_tritici_Crop_Incidence,Yellow_rust_Crop_Incidence_other_leaf_lag1,disease history,0.68700606,0.49857187,0.021238264
+Zymoseptoria_tritici_Crop_Incidence,autumn_mean_temp,seasonal weather,1.0866225,1.0219857,0.0085688215
+Zymoseptoria_tritici_Crop_Incidence,autumn_total_precip,seasonal weather,0.09806636,0.09247132,0.0040016
+Zymoseptoria_tritici_Crop_Incidence,autumn_rain_days,seasonal weather,0.52819926,0.5871442,0.00639119
+Zymoseptoria_tritici_Crop_Incidence,autumn_mean_rh,seasonal weather,0.047141016,0.051133454,0.0039317436
+Zymoseptoria_tritici_Crop_Incidence,autumn_mean_wind,seasonal weather,0.051286656,0.04162765,0.0037726704
+Zymoseptoria_tritici_Crop_Incidence,winter_mean_temp,seasonal weather,0.29032254,0.36025757,0.005373492
+Zymoseptoria_tritici_Crop_Incidence,winter_total_precip,seasonal weather,0.07869519,0.07993027,0.0040556625
+Zymoseptoria_tritici_Crop_Incidence,winter_rain_days,seasonal weather,0.03329993,0.030164152,0.003486969
+Zymoseptoria_tritici_Crop_Incidence,winter_mean_rh,seasonal weather,0.7885753,1.045016,0.007068516
+Zymoseptoria_tritici_Crop_Incidence,winter_mean_wind,seasonal weather,0.04728151,0.03806568,0.0040566204
+Zymoseptoria_tritici_Crop_Incidence,spring_mean_temp,seasonal weather,0.31025788,0.2591582,0.009252602
+Zymoseptoria_tritici_Crop_Incidence,spring_total_precip,seasonal weather,0.09400074,0.115981914,0.0065912195
+Zymoseptoria_tritici_Crop_Incidence,spring_rain_days,seasonal weather,0.115098275,0.11725129,0.00684973
+Zymoseptoria_tritici_Crop_Incidence,spring_mean_rh,seasonal weather,0.8743766,0.90084267,0.011460521
+Zymoseptoria_tritici_Crop_Incidence,spring_mean_wind,seasonal weather,0.2561392,0.24417663,0.0051919655
+Zymoseptoria_tritici_Crop_Incidence,spring_to_june_mean_temp,seasonal weather,0.17347041,0.13680673,0.0046658013
+Zymoseptoria_tritici_Crop_Incidence,spring_to_june_total_precip,seasonal weather,0.082962364,0.087029725,0.003306584
+Zymoseptoria_tritici_Crop_Incidence,spring_to_june_rain_days,seasonal weather,0.0533816,0.0803356,0.004995495
+Zymoseptoria_tritici_Crop_Incidence,spring_to_june_mean_rh,seasonal weather,2.6615558,2.6714997,0.020348947
+Zymoseptoria_tritici_Crop_Incidence,spring_to_june_mean_wind,seasonal weather,0.124097265,0.16815731,0.0043109795
+Zymoseptoria_tritici_Crop_Incidence,autumn_thermal_time,thermal / wetness / splash,0.30096322,0.27966702,0.009337066
+Zymoseptoria_tritici_Crop_Incidence,autumn_wetness_hours,thermal / wetness / splash,0.21919863,0.27955574,0.0049326373
+Zymoseptoria_tritici_Crop_Incidence,autumn_wet_day_frac,thermal / wetness / splash,0.21708484,0.29505324,0.0050096745
+Zymoseptoria_tritici_Crop_Incidence,autumn_splash_risk,thermal / wetness / splash,0.05897227,0.06115059,0.0039825602
+Zymoseptoria_tritici_Crop_Incidence,winter_thermal_time,thermal / wetness / splash,0.12897807,0.16704464,0.0058130696
+Zymoseptoria_tritici_Crop_Incidence,winter_wetness_hours,thermal / wetness / splash,0.16660324,0.16578817,0.005553077
+Zymoseptoria_tritici_Crop_Incidence,winter_wet_day_frac,thermal / wetness / splash,0.11676357,0.11633606,0.006233714
+Zymoseptoria_tritici_Crop_Incidence,winter_splash_risk,thermal / wetness / splash,0.27991807,0.2806794,0.003624505
+Zymoseptoria_tritici_Crop_Incidence,spring_thermal_time,thermal / wetness / splash,0.1055307,0.08951219,0.012145934
+Zymoseptoria_tritici_Crop_Incidence,spring_wetness_hours,thermal / wetness / splash,0.4623038,0.39717174,0.015610367
+Zymoseptoria_tritici_Crop_Incidence,spring_wet_day_frac,thermal / wetness / splash,0.62598485,0.5292064,0.00813898
+Zymoseptoria_tritici_Crop_Incidence,spring_splash_risk,thermal / wetness / splash,0.19328012,0.20970595,0.0103635695
+Zymoseptoria_tritici_Crop_Incidence,spring_to_june_thermal_time,thermal / wetness / splash,0.0680533,0.054863352,0.0038473778
+Zymoseptoria_tritici_Crop_Incidence,spring_to_june_wetness_hours,thermal / wetness / splash,0.32735562,0.27586135,0.014748405
+Zymoseptoria_tritici_Crop_Incidence,spring_to_june_wet_day_frac,thermal / wetness / splash,0.19377127,0.1912095,0.014291513
+Zymoseptoria_tritici_Crop_Incidence,spring_to_june_splash_risk,thermal / wetness / splash,0.16592573,0.15117279,0.017021853
+Zymoseptoria_tritici_Crop_Incidence,season_total_thermal_time,thermal / wetness / splash,0.44586992,0.50038207,0.0111996215
+Zymoseptoria_tritici_Crop_Incidence,season_total_wetness_hours,thermal / wetness / splash,0.09445821,0.09257399,0.0061730645
+Zymoseptoria_tritici_Crop_Incidence,season_total_wet_day_frac,thermal / wetness / splash,0.0893126,0.09571603,0.004509811
+Zymoseptoria_tritici_Crop_Incidence,season_total_splash_risk,thermal / wetness / splash,0.23683798,0.1573441,0.00771294
+Zymoseptoria_tritici_Crop_Incidence,fungicide_smoothed,fungicide,1.8528078,1.4270979,0.0396143
+Zymoseptoria_tritici_Crop_Incidence,fungicide_decay_dose,fungicide,7.9602747,6.397784,0.13352032
+Zymoseptoria_tritici_Crop_Incidence,fungicide_residual_at_survey,fungicide,1.3043221,1.0445881,0.026061231
+Zymoseptoria_tritici_Crop_Incidence,Unknown_ag_12,agronomic,0.40453777,0.464355,0.018754575
+Zymoseptoria_tritici_Crop_Incidence,Cereals_ag_8_3,agronomic,0.6092133,0.83857936,0.0064323195
+Zymoseptoria_tritici_Crop_Incidence,Percentage of fields with wheat thrice in previous 4 years (%)_ag_11,agronomic,0.17175202,0.16390936,0.0066842856
+Zymoseptoria_tritici_Crop_Incidence,sow_offset,sowing date,0.57339704,0.46175966,0.03268281
+Zymoseptoria_tritici_Crop_Incidence,prop_anth,land use,0.12009548,0.098028995,0.003381472
+Zymoseptoria_tritici_Crop_Incidence,prop_nature,land use,0.13438901,0.16393586,0.004346001
+Zymoseptoria_tritici_Crop_Incidence,gs31_39_days,growth-stage weather,0.06606922,0.06484045,0.005317194
+Zymoseptoria_tritici_Crop_Incidence,gs31_39_mean_temp,growth-stage weather,0.30488947,0.3677342,0.004488045
+Zymoseptoria_tritici_Crop_Incidence,gs31_39_total_precip,growth-stage weather,0.7760986,0.7384718,0.012705234
+Zymoseptoria_tritici_Crop_Incidence,gs31_39_wetness_hours,growth-stage weather,0.17605491,0.12094699,0.012217199
+Zymoseptoria_tritici_Crop_Incidence,gs31_39_splash_risk,growth-stage weather,0.53303945,0.4242793,0.010581365
+Zymoseptoria_tritici_Crop_Incidence,gs39_survey_days,growth-stage weather,0.07448962,0.06792617,0.004217752
+Zymoseptoria_tritici_Crop_Incidence,gs39_survey_mean_temp,growth-stage weather,0.25308257,0.262117,0.0057852217
+Zymoseptoria_tritici_Crop_Incidence,gs39_survey_total_precip,growth-stage weather,2.190877,2.6033852,0.048318904
+Zymoseptoria_tritici_Crop_Incidence,gs39_survey_wetness_hours,growth-stage weather,4.8768463,4.917932,0.048943236
+Zymoseptoria_tritici_Crop_Incidence,gs39_survey_splash_risk,growth-stage weather,2.5049794,2.8191667,0.047511242
+Zymoseptoria_tritici_Crop_Incidence,gs61_survey_days,growth-stage weather,0.25637394,0.27709302,0.0060981526
+Zymoseptoria_tritici_Crop_Incidence,gs61_survey_mean_temp,growth-stage weather,0.4458517,0.5649568,0.005394546
+Zymoseptoria_tritici_Crop_Incidence,gs61_survey_total_precip,growth-stage weather,0.12235522,0.11712931,0.003644044
+Zymoseptoria_tritici_Crop_Incidence,gs61_survey_wetness_hours,growth-stage weather,0.21323285,0.19022498,0.0065974863
+Zymoseptoria_tritici_Crop_Incidence,gs61_survey_splash_risk,growth-stage weather,0.32913426,0.32735965,0.0041984823
+Yellow_rust_Crop_Incidence,Region,region / leaf,0.3305923,0.19608174,0.008059496
 Yellow_rust_Crop_Incidence,Leaf,region / leaf,0.0,0.0,0.0
-Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_lag1,disease history,0.042139404,0.03471439,0.008576965
-Yellow_rust_Crop_Incidence,Yellow_rust_Disease_Severity_lag1,disease history,0.20060699,0.13919517,0.01461404
-Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_lag1,disease history,0.06852374,0.044449203,0.006880513
-Yellow_rust_Crop_Incidence,Yellow_rust_Crop_Incidence_lag1,disease history,0.017668966,0.017833045,0.0036032987
-Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_lag2,disease history,0.16979787,0.096448295,0.02082548
-Yellow_rust_Crop_Incidence,Yellow_rust_Disease_Severity_lag2,disease history,0.08683054,0.051449288,0.020952707
-Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_lag2,disease history,0.16047773,0.08449377,0.024120504
-Yellow_rust_Crop_Incidence,Yellow_rust_Crop_Incidence_lag2,disease history,0.3356248,0.17693767,0.043417376
-Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_other_leaf_lag1,disease history,0.010569269,0.013366826,0.0028198115
-Yellow_rust_Crop_Incidence,Yellow_rust_Disease_Severity_other_leaf_lag1,disease history,0.122253135,0.08854822,0.007649116
-Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_other_leaf_lag1,disease history,0.014089761,0.014184266,0.0033719256
-Yellow_rust_Crop_Incidence,Yellow_rust_Crop_Incidence_other_leaf_lag1,disease history,0.02355283,0.021222351,0.024020966
-Yellow_rust_Crop_Incidence,autumn_mean_temp,seasonal weather,0.23304689,0.22869158,0.013197308
-Yellow_rust_Crop_Incidence,autumn_total_precip,seasonal weather,0.024115155,0.025707727,0.0054117674
-Yellow_rust_Crop_Incidence,autumn_rain_days,seasonal weather,0.019581286,0.026077684,0.012216926
-Yellow_rust_Crop_Incidence,autumn_mean_rh,seasonal weather,0.06341343,0.073685095,0.005337258
-Yellow_rust_Crop_Incidence,autumn_mean_wind,seasonal weather,0.16174126,0.097569786,0.009975584
-Yellow_rust_Crop_Incidence,winter_mean_temp,seasonal weather,1.1900032,0.69169307,0.025363365
-Yellow_rust_Crop_Incidence,winter_total_precip,seasonal weather,0.060394913,0.055263795,0.0042297137
-Yellow_rust_Crop_Incidence,winter_rain_days,seasonal weather,0.078881934,0.0871355,0.0026576067
-Yellow_rust_Crop_Incidence,winter_mean_rh,seasonal weather,0.11089675,0.07243881,0.010164407
-Yellow_rust_Crop_Incidence,winter_mean_wind,seasonal weather,0.052682947,0.026011635,0.014785932
-Yellow_rust_Crop_Incidence,spring_mean_temp,seasonal weather,0.03193789,0.04151152,0.004819613
-Yellow_rust_Crop_Incidence,spring_total_precip,seasonal weather,0.015515501,0.018706199,0.0055258325
-Yellow_rust_Crop_Incidence,spring_rain_days,seasonal weather,0.34997717,0.35640746,0.020846622
-Yellow_rust_Crop_Incidence,spring_mean_rh,seasonal weather,0.032514058,0.02515006,0.007980777
-Yellow_rust_Crop_Incidence,spring_mean_wind,seasonal weather,0.19265671,0.105211854,0.015674938
-Yellow_rust_Crop_Incidence,spring_to_june_mean_temp,seasonal weather,0.031235367,0.024333734,0.010956803
-Yellow_rust_Crop_Incidence,spring_to_june_total_precip,seasonal weather,0.018829998,0.013674034,0.0045772474
-Yellow_rust_Crop_Incidence,spring_to_june_rain_days,seasonal weather,0.2579072,0.19241364,0.046587605
-Yellow_rust_Crop_Incidence,spring_to_june_mean_rh,seasonal weather,0.026512453,0.028905403,0.009675377
-Yellow_rust_Crop_Incidence,spring_to_june_mean_wind,seasonal weather,0.040087912,0.023195177,0.012566762
-Yellow_rust_Crop_Incidence,autumn_thermal_time,thermal / wetness / splash,0.06974666,0.06280728,0.013661558
-Yellow_rust_Crop_Incidence,autumn_wetness_hours,thermal / wetness / splash,0.008241534,0.012092811,0.0028505535
-Yellow_rust_Crop_Incidence,autumn_wet_day_frac,thermal / wetness / splash,0.008412978,0.009531888,0.0019886938
-Yellow_rust_Crop_Incidence,autumn_splash_risk,thermal / wetness / splash,0.017508402,0.014391889,0.0029612049
-Yellow_rust_Crop_Incidence,winter_thermal_time,thermal / wetness / splash,0.4029633,0.26538676,0.019696342
-Yellow_rust_Crop_Incidence,winter_wetness_hours,thermal / wetness / splash,0.07584066,0.0675688,0.008699489
-Yellow_rust_Crop_Incidence,winter_wet_day_frac,thermal / wetness / splash,0.077782,0.060647458,0.009398572
-Yellow_rust_Crop_Incidence,winter_splash_risk,thermal / wetness / splash,0.105378926,0.08616178,0.007759385
-Yellow_rust_Crop_Incidence,spring_thermal_time,thermal / wetness / splash,0.013318464,0.017042622,0.0045515457
-Yellow_rust_Crop_Incidence,spring_wetness_hours,thermal / wetness / splash,0.29562798,0.26353997,0.014500564
-Yellow_rust_Crop_Incidence,spring_wet_day_frac,thermal / wetness / splash,0.4379757,0.3036887,0.024774514
-Yellow_rust_Crop_Incidence,spring_splash_risk,thermal / wetness / splash,0.03235018,0.023386521,0.012697634
-Yellow_rust_Crop_Incidence,spring_to_june_thermal_time,thermal / wetness / splash,0.013036078,0.012723217,0.011784198
-Yellow_rust_Crop_Incidence,spring_to_june_wetness_hours,thermal / wetness / splash,0.44598374,0.23966968,0.08298868
-Yellow_rust_Crop_Incidence,spring_to_june_wet_day_frac,thermal / wetness / splash,0.58269894,0.37161902,0.06568964
-Yellow_rust_Crop_Incidence,spring_to_june_splash_risk,thermal / wetness / splash,0.024848942,0.016991803,0.008861277
-Yellow_rust_Crop_Incidence,season_total_thermal_time,thermal / wetness / splash,0.022123164,0.0240748,0.010223845
-Yellow_rust_Crop_Incidence,season_total_wetness_hours,thermal / wetness / splash,0.014905326,0.009426361,0.007896183
-Yellow_rust_Crop_Incidence,season_total_wet_day_frac,thermal / wetness / splash,0.014524045,0.013624059,0.006582264
-Yellow_rust_Crop_Incidence,season_total_splash_risk,thermal / wetness / splash,0.09488363,0.07291605,0.005590649
-Yellow_rust_Crop_Incidence,fungicide_smoothed,fungicide,2.8180583,2.4754798,0.06367971
-Yellow_rust_Crop_Incidence,fungicide_decay_dose,fungicide,1.1870816,0.9645712,0.050602548
-Yellow_rust_Crop_Incidence,fungicide_residual_at_survey,fungicide,0.06676735,0.06263711,0.010319921
-Yellow_rust_Crop_Incidence,Unknown_ag_12,agronomic,0.021157993,0.019462135,0.0076378034
-Yellow_rust_Crop_Incidence,Cereals_ag_8_3,agronomic,0.15587309,0.14139916,0.0064309477
-Yellow_rust_Crop_Incidence,Percentage of fields with wheat thrice in previous 4 years (%)_ag_11,agronomic,0.04324597,0.16266987,0.00518168
-Yellow_rust_Crop_Incidence,sow_offset,sowing date,0.021317074,0.018342521,0.010488496
-Yellow_rust_Crop_Incidence,prop_anth,land use,0.040622972,0.023696404,0.006434598
-Yellow_rust_Crop_Incidence,prop_nature,land use,0.024952637,0.011934573,0.0063606314
-Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_natl_lag1,spatial spread,0.05162053,0.02840611,0.014792751
-Yellow_rust_Crop_Incidence,Yellow_rust_Disease_Severity_natl_lag1,spatial spread,1.3190544,1.1143936,0.024576511
-Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_natl_lag1,spatial spread,0.4321463,0.38012567,0.020580249
-Yellow_rust_Crop_Incidence,Yellow_rust_Crop_Incidence_natl_lag1,spatial spread,0.29964074,0.3369029,0.016152676
+Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_lag1,disease history,0.043439873,0.040880673,0.0072774095
+Yellow_rust_Crop_Incidence,Yellow_rust_Disease_Severity_lag1,disease history,0.14497067,0.10540818,0.015542316
+Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_lag1,disease history,0.08153981,0.052674644,0.009340825
+Yellow_rust_Crop_Incidence,Yellow_rust_Crop_Incidence_lag1,disease history,0.027071437,0.026097301,0.005307803
+Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_lag2,disease history,0.19143979,0.10916766,0.027531296
+Yellow_rust_Crop_Incidence,Yellow_rust_Disease_Severity_lag2,disease history,0.1143234,0.095653504,0.030823242
+Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_lag2,disease history,0.12164502,0.061850864,0.025003653
+Yellow_rust_Crop_Incidence,Yellow_rust_Crop_Incidence_lag2,disease history,0.18985602,0.098605886,0.04984782
+Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_other_leaf_lag1,disease history,0.012852436,0.014605975,0.0011017116
+Yellow_rust_Crop_Incidence,Yellow_rust_Disease_Severity_other_leaf_lag1,disease history,0.12143151,0.09688833,0.0076342793
+Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_other_leaf_lag1,disease history,0.014307588,0.015534501,0.0034746812
+Yellow_rust_Crop_Incidence,Yellow_rust_Crop_Incidence_other_leaf_lag1,disease history,0.010788021,0.01241654,0.0030847944
+Yellow_rust_Crop_Incidence,autumn_mean_temp,seasonal weather,0.15063994,0.16672519,0.01087996
+Yellow_rust_Crop_Incidence,autumn_total_precip,seasonal weather,0.016518245,0.015282908,0.003967696
+Yellow_rust_Crop_Incidence,autumn_rain_days,seasonal weather,0.00941316,0.0095211435,0.0020721098
+Yellow_rust_Crop_Incidence,autumn_mean_rh,seasonal weather,0.07888167,0.09047552,0.007288821
+Yellow_rust_Crop_Incidence,autumn_mean_wind,seasonal weather,0.12676445,0.07521287,0.009502765
+Yellow_rust_Crop_Incidence,winter_mean_temp,seasonal weather,1.2221694,0.6734295,0.031321432
+Yellow_rust_Crop_Incidence,winter_total_precip,seasonal weather,0.044395648,0.042194173,0.004559096
+Yellow_rust_Crop_Incidence,winter_rain_days,seasonal weather,0.0771878,0.07977192,0.008482725
+Yellow_rust_Crop_Incidence,winter_mean_rh,seasonal weather,0.09038143,0.06087876,0.013703237
+Yellow_rust_Crop_Incidence,winter_mean_wind,seasonal weather,0.084500775,0.038875222,0.015552679
+Yellow_rust_Crop_Incidence,spring_mean_temp,seasonal weather,0.013376465,0.017932314,0.002366573
+Yellow_rust_Crop_Incidence,spring_total_precip,seasonal weather,0.019611713,0.01746172,0.004941217
+Yellow_rust_Crop_Incidence,spring_rain_days,seasonal weather,0.15565746,0.16314362,0.02207266
+Yellow_rust_Crop_Incidence,spring_mean_rh,seasonal weather,0.050270624,0.040885262,0.014451402
+Yellow_rust_Crop_Incidence,spring_mean_wind,seasonal weather,0.17959571,0.08454459,0.019454436
+Yellow_rust_Crop_Incidence,spring_to_june_mean_temp,seasonal weather,0.0064384984,0.0023612203,0.0034642778
+Yellow_rust_Crop_Incidence,spring_to_june_total_precip,seasonal weather,0.056643944,0.046495177,0.017423788
+Yellow_rust_Crop_Incidence,spring_to_june_rain_days,seasonal weather,0.74439824,0.6218957,0.047589324
+Yellow_rust_Crop_Incidence,spring_to_june_mean_rh,seasonal weather,0.012749734,0.009579688,0.020303404
+Yellow_rust_Crop_Incidence,spring_to_june_mean_wind,seasonal weather,0.05864481,0.023910632,0.018398084
+Yellow_rust_Crop_Incidence,autumn_thermal_time,thermal / wetness / splash,0.0516207,0.050530363,0.01079058
+Yellow_rust_Crop_Incidence,autumn_wetness_hours,thermal / wetness / splash,0.011765731,0.017311014,0.0037614424
+Yellow_rust_Crop_Incidence,autumn_wet_day_frac,thermal / wetness / splash,0.007578552,0.008643761,0.0014025746
+Yellow_rust_Crop_Incidence,autumn_splash_risk,thermal / wetness / splash,0.026945177,0.023070307,0.0034941558
+Yellow_rust_Crop_Incidence,winter_thermal_time,thermal / wetness / splash,0.44008213,0.28944808,0.024476623
+Yellow_rust_Crop_Incidence,winter_wetness_hours,thermal / wetness / splash,0.045647014,0.03856663,0.011268386
+Yellow_rust_Crop_Incidence,winter_wet_day_frac,thermal / wetness / splash,0.041809537,0.035432585,0.0071980343
+Yellow_rust_Crop_Incidence,winter_splash_risk,thermal / wetness / splash,0.096279554,0.071390614,0.0075532338
+Yellow_rust_Crop_Incidence,spring_thermal_time,thermal / wetness / splash,0.0032178748,0.006109377,0.0041349316
+Yellow_rust_Crop_Incidence,spring_wetness_hours,thermal / wetness / splash,0.17707655,0.15233412,0.015187636
+Yellow_rust_Crop_Incidence,spring_wet_day_frac,thermal / wetness / splash,0.11147662,0.06665378,0.01932879
+Yellow_rust_Crop_Incidence,spring_splash_risk,thermal / wetness / splash,0.016503613,0.0108178435,0.009113881
+Yellow_rust_Crop_Incidence,spring_to_june_thermal_time,thermal / wetness / splash,0.0051823766,0.0031793988,0.0037906165
+Yellow_rust_Crop_Incidence,spring_to_june_wetness_hours,thermal / wetness / splash,0.5838276,0.5497807,0.078503944
+Yellow_rust_Crop_Incidence,spring_to_june_wet_day_frac,thermal / wetness / splash,0.7305884,0.51216394,0.06055125
+Yellow_rust_Crop_Incidence,spring_to_june_splash_risk,thermal / wetness / splash,0.0042286804,0.003315229,0.0007464273
+Yellow_rust_Crop_Incidence,season_total_thermal_time,thermal / wetness / splash,0.0278201,0.035907608,0.010683691
+Yellow_rust_Crop_Incidence,season_total_wetness_hours,thermal / wetness / splash,0.011039309,0.014048482,0.0029821922
+Yellow_rust_Crop_Incidence,season_total_wet_day_frac,thermal / wetness / splash,0.0069082603,0.0046787765,0.003447019
+Yellow_rust_Crop_Incidence,season_total_splash_risk,thermal / wetness / splash,0.05692942,0.052545667,0.0054719346
+Yellow_rust_Crop_Incidence,fungicide_smoothed,fungicide,2.8019729,2.5747092,0.057360847
+Yellow_rust_Crop_Incidence,fungicide_decay_dose,fungicide,1.054769,0.87766093,0.04752178
+Yellow_rust_Crop_Incidence,fungicide_residual_at_survey,fungicide,0.05506117,0.05091127,0.009547314
+Yellow_rust_Crop_Incidence,Unknown_ag_12,agronomic,0.01813056,0.01922014,0.008296554
+Yellow_rust_Crop_Incidence,Cereals_ag_8_3,agronomic,0.12889376,0.15055855,0.005521552
+Yellow_rust_Crop_Incidence,Percentage of fields with wheat thrice in previous 4 years (%)_ag_11,agronomic,0.047906123,0.034265894,0.0062245335
+Yellow_rust_Crop_Incidence,sow_offset,sowing date,0.027275715,0.020369792,0.009657127
+Yellow_rust_Crop_Incidence,prop_anth,land use,0.026458388,0.015256776,0.0042587
+Yellow_rust_Crop_Incidence,prop_nature,land use,0.025498828,0.01281898,0.0040615676
+Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Disease_Severity_natl_lag1,spatial spread,0.044110812,0.023043578,0.018513774
+Yellow_rust_Crop_Incidence,Yellow_rust_Disease_Severity_natl_lag1,spatial spread,1.3325512,1.1637213,0.028233517
+Yellow_rust_Crop_Incidence,Zymoseptoria_tritici_Crop_Incidence_natl_lag1,spatial spread,0.33401346,0.3031789,0.018658321
+Yellow_rust_Crop_Incidence,Yellow_rust_Crop_Incidence_natl_lag1,spatial spread,0.32200903,0.34570262,0.02643207

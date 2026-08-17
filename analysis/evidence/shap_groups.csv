@@ -1,37 +1,37 @@
 target,family,mean_abs_shap_train,mean_abs_shap_test,share_test_%,share_train_%,shift_pp
-Yellow_rust_Crop_Incidence,agronomic,0.22027706,0.32353115,2.974234,1.5964386,1.3777955
-Yellow_rust_Crop_Incidence,disease history,1.252135,0.7828425,7.1967006,9.074739,-1.8780389
-Yellow_rust_Crop_Incidence,fungicide,4.071907,3.5026882,32.200344,29.510794,2.6895504
-Yellow_rust_Crop_Incidence,land use,0.06557561,0.03563098,0.32755694,0.4752535,-0.14769655
-Yellow_rust_Crop_Incidence,region / leaf,0.3142702,0.19385922,1.7821553,2.2776458,-0.49549055
-Yellow_rust_Crop_Incidence,seasonal weather,2.991932,2.2137837,20.351398,21.683765,-1.332367
-Yellow_rust_Crop_Incidence,sowing date,0.021317074,0.018342521,0.16862348,0.15449364,0.014129832
-Yellow_rust_Crop_Incidence,spatial spread,2.1024618,1.8598282,17.097471,15.237409,1.8600626
-Yellow_rust_Crop_Incidence,thermal / wetness / splash,2.7581506,1.9472915,17.901525,19.989456,-2.0879307
-Yellow_rust_Disease_Severity,agronomic,0.004999862,0.0030501375,1.4692957,2.014484,-0.5451882
-Yellow_rust_Disease_Severity,disease history,0.03771393,0.03063869,14.759104,15.19524,-0.43613625
-Yellow_rust_Disease_Severity,fungicide,0.040180966,0.034297924,16.52181,16.18923,0.33258057
-Yellow_rust_Disease_Severity,land use,0.016676221,0.009433933,4.544463,6.7189813,-2.174518
-Yellow_rust_Disease_Severity,region / leaf,0.0041859886,0.0033937697,1.6348283,1.6865678,-0.051739454
-Yellow_rust_Disease_Severity,seasonal weather,0.061585624,0.053359408,25.704006,24.813335,0.8906708
-Yellow_rust_Disease_Severity,sowing date,0.000898676,0.00078325503,0.3773054,0.36208367,0.015221715
-Yellow_rust_Disease_Severity,spatial spread,0.033092063,0.030286111,14.589262,13.333054,1.2562084
-Yellow_rust_Disease_Severity,thermal / wetness / splash,0.048862346,0.04234858,20.39993,19.687025,0.712904
-Zymoseptoria_tritici_Crop_Incidence,agronomic,1.1808454,1.4383552,2.857378,2.231339,0.626039
-Zymoseptoria_tritici_Crop_Incidence,disease history,6.9426413,5.6472116,11.21852,13.118895,-1.9003744
-Zymoseptoria_tritici_Crop_Incidence,fungicide,11.044872,8.96339,17.806307,20.870518,-3.064211
-Zymoseptoria_tritici_Crop_Incidence,growth-stage weather,12.639717,13.455397,26.729944,23.884153,2.8457909
-Zymoseptoria_tritici_Crop_Incidence,land use,0.26068327,0.21766005,0.4323946,0.4925901,-0.060195506
-Zymoseptoria_tritici_Crop_Incidence,region / leaf,8.700019,8.501152,16.888042,16.439655,0.44838715
-Zymoseptoria_tritici_Crop_Incidence,seasonal weather,7.5411496,7.6758966,15.248624,14.249842,0.99878216
-Zymoseptoria_tritici_Crop_Incidence,sowing date,0.60715735,0.4756472,0.94490135,1.1472914,-0.20239007
-Zymoseptoria_tritici_Crop_Incidence,thermal / wetness / splash,4.003849,3.9635825,7.873892,7.5657187,0.30817318
-Zymoseptoria_tritici_Disease_Severity,agronomic,0.036056727,0.029216852,2.1626568,2.7445652,-0.58190846
-Zymoseptoria_tritici_Disease_Severity,disease history,0.13900894,0.14452174,10.697625,10.5810795,0.11654568
-Zymoseptoria_tritici_Disease_Severity,fungicide,0.12600876,0.1005358,7.441747,9.591533,-2.1497855
-Zymoseptoria_tritici_Disease_Severity,growth-stage weather,0.30420765,0.32599854,24.130695,23.155672,0.97502327
-Zymoseptoria_tritici_Disease_Severity,land use,0.0050662835,0.008152682,0.6034686,0.3856353,0.21783331
-Zymoseptoria_tritici_Disease_Severity,region / leaf,0.2625911,0.2801708,20.738485,19.987904,0.75058174
-Zymoseptoria_tritici_Disease_Severity,seasonal weather,0.34250787,0.3610689,26.726633,26.071007,0.6556263
-Zymoseptoria_tritici_Disease_Severity,sowing date,0.0085288,0.0071407566,0.528565,0.649195,-0.120630026
-Zymoseptoria_tritici_Disease_Severity,thermal / wetness / splash,0.08977388,0.094164215,6.970117,6.8334064,0.13671064
+Yellow_rust_Crop_Incidence,agronomic,0.19493043,0.20404458,1.8991864,1.4681066,0.43107975
+Yellow_rust_Crop_Incidence,disease history,1.0736656,0.7297841,6.792613,8.086247,-1.2936344
+Yellow_rust_Crop_Incidence,fungicide,3.911803,3.5032814,32.607502,29.461506,3.145996
+Yellow_rust_Crop_Incidence,land use,0.051957216,0.028075755,0.26132077,0.3913126,-0.12999183
+Yellow_rust_Crop_Incidence,region / leaf,0.3305923,0.19608174,1.8250706,2.4898355,-0.6647649
+Yellow_rust_Crop_Incidence,seasonal weather,3.1982396,2.2805772,21.226934,24.087345,-2.8604107
+Yellow_rust_Crop_Incidence,sowing date,0.027275715,0.020369792,0.18959597,0.20542538,-0.015829414
+Yellow_rust_Crop_Incidence,spatial spread,2.0326846,1.8356465,17.085651,15.309039,1.7766123
+Yellow_rust_Crop_Incidence,thermal / wetness / splash,2.4565272,1.9459283,18.112123,18.501184,-0.38906097
+Yellow_rust_Disease_Severity,agronomic,0.004305654,0.00287122,1.3424883,1.6959903,-0.35350204
+Yellow_rust_Disease_Severity,disease history,0.030668514,0.023132922,10.8161955,12.080278,-1.2640829
+Yellow_rust_Disease_Severity,fungicide,0.037819613,0.032145947,15.03039,14.897084,0.13330555
+Yellow_rust_Disease_Severity,land use,0.016642159,0.009595128,4.486367,6.55532,-2.0689526
+Yellow_rust_Disease_Severity,region / leaf,0.004835346,0.0038158095,1.7841473,1.904635,-0.12048769
+Yellow_rust_Disease_Severity,seasonal weather,0.06683412,0.057505168,26.88753,26.325855,0.5616741
+Yellow_rust_Disease_Severity,sowing date,0.0010280292,0.001192645,0.55764174,0.40493906,0.15270269
+Yellow_rust_Disease_Severity,spatial spread,0.038256362,0.035249446,16.481485,15.069119,1.4123659
+Yellow_rust_Disease_Severity,thermal / wetness / splash,0.053482782,0.04836471,22.613752,21.066782,1.5469704
+Zymoseptoria_tritici_Crop_Incidence,agronomic,1.1855031,1.4668437,2.8283484,2.1728191,0.65552926
+Zymoseptoria_tritici_Crop_Incidence,disease history,7.3418484,6.006639,11.581921,13.456319,-1.8743982
+Zymoseptoria_tritici_Crop_Incidence,fungicide,11.117405,8.869471,17.101994,20.376253,-3.2742596
+Zymoseptoria_tritici_Crop_Incidence,growth-stage weather,13.123375,13.863564,26.731535,24.052843,2.6786919
+Zymoseptoria_tritici_Crop_Incidence,land use,0.25448447,0.26196486,0.5051171,0.4664254,0.03869173
+Zymoseptoria_tritici_Crop_Incidence,region / leaf,8.672589,8.412929,16.221697,15.895334,0.3263626
+Zymoseptoria_tritici_Crop_Incidence,seasonal weather,7.7948303,8.129036,15.674297,14.286557,1.3877401
+Zymoseptoria_tritici_Crop_Incidence,sowing date,0.57339704,0.46175966,0.89035875,1.0509361,-0.16057736
+Zymoseptoria_tritici_Crop_Incidence,thermal / wetness / splash,4.497166,4.3899946,8.464728,8.2425165,0.22221184
+Zymoseptoria_tritici_Disease_Severity,agronomic,0.035074856,0.025911132,1.9435141,2.7142336,-0.7707195
+Zymoseptoria_tritici_Disease_Severity,disease history,0.14486411,0.15276158,11.458176,11.210168,0.24800777
+Zymoseptoria_tritici_Disease_Severity,fungicide,0.12199378,0.09804204,7.3538313,9.44037,-2.0865383
+Zymoseptoria_tritici_Disease_Severity,growth-stage weather,0.3103981,0.32732195,24.55141,24.019855,0.5315552
+Zymoseptoria_tritici_Disease_Severity,land use,0.005391976,0.008433968,0.6326059,0.4172528,0.2153531
+Zymoseptoria_tritici_Disease_Severity,region / leaf,0.25208518,0.26927462,20.19746,19.507366,0.690094
+Zymoseptoria_tritici_Disease_Severity,seasonal weather,0.3354364,0.36194703,27.14853,25.95742,1.1911087
+Zymoseptoria_tritici_Disease_Severity,sowing date,0.011178164,0.0092051225,0.69044787,0.8650113,-0.17456341
+Zymoseptoria_tritici_Disease_Severity,thermal / wetness / splash,0.07583375,0.080312885,6.024022,5.8683214,0.15570068

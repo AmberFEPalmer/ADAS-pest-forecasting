@@ -24,6 +24,12 @@ SEEDS = [0, 1, 2, 3, 4]
 CAT_COLS = ["Region", "Leaf"]
 TOP_N = 15
 FIG_DIR = Path("report/figures")
+PINKS = ["#fbc4d4", "#f28cae", "#d94e85", "#8f1d51"]
+PLOT_FAMILY_LABELS = {"region / leaf": "Region"}
+PLOT_TARGET_LABELS = {
+    "YR inc": "Yellow rust incidence", "YR sev": "Yellow rust severity",
+    "Septoria inc": "Septoria incidence", "Septoria sev": "Septoria severity",
+}
 
 XGB_PARAMS = dict(
     max_depth=3, learning_rate=0.03, subsample=0.8, colsample_bytree=0.7,
@@ -248,11 +254,17 @@ if __name__ == "__main__":
         plt.close()
         print(f"  wrote {out}")
 
+    ### presentation-only relabelling; the CSV keeps the internal family / target names
+    plot_share = share.rename(index=PLOT_FAMILY_LABELS, columns=PLOT_TARGET_LABELS)
+    plot_share.index = [s[:1].upper() + s[1:] for s in plot_share.index]
+
     fig, ax = plt.subplots(figsize=(10, 5))
-    share.plot.barh(ax=ax)
-    ax.set_xlabel("share of total |SHAP| attribution (%)")
+    ### one pink per target, light -> dark so adjacent bars stay separable
+    plot_share.plot.barh(ax=ax, color=PINKS[:plot_share.shape[1]],
+                         edgecolor="white", linewidth=0.4)
+    ax.set_xlabel("Percentage share of total SHAP")
     ax.set_ylabel("")
-    ax.set_title("What the model actually uses, by feature family (test window 2016+)")
+    ax.set_title("SHapley Additive Explanations (SHAP): Importance of Features")
     ax.legend(fontsize=8)
     plt.tight_layout()
     plt.savefig(FIG_DIR / "shap_families.png", dpi=150)

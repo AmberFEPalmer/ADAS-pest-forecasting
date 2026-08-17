@@ -1,0 +1,9 @@
+target,test,n,loo_r2,perm_p,best_insample_r2,best_insample_feature
+Septoria sev,A national year effect,29,0.19246890636097858,0.0845771144278607,0.44200359450110693,gs31_39_wetness_hours
+Septoria sev,B region x year anomaly,232,0.003204993731295014,0.22885572139303484,0.11931508067471908,spring_to_june_mean_rh
+YR sev,A national year effect,29,-0.8850242120424252,1.0,0.15662691358680536,winter_splash_risk
+YR sev,B region x year anomaly,232,-0.06958400205908166,0.9850746268656716,0.023469872056771757,season_total_splash_risk
+Septoria inc,A national year effect,29,0.543651413058442,0.004975124378109453,0.48335174911948375,GS31_doy
+Septoria inc,B region x year anomaly,232,0.06091393529574496,0.04477611940298507,0.11804667635424748,pre_survey_30d_mean_rh
+YR inc,A national year effect,29,-0.37502040131169423,0.8159203980099502,0.28481658489531936,winter_splash_risk
+YR inc,B region x year anomaly,232,-0.10030697781045217,0.9154228855721394,0.035138862556282624,autumn_wet_day_frac

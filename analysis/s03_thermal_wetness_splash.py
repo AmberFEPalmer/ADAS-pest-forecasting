@@ -26,8 +26,10 @@ WINDOWS = {
     "autumn": lambda year: (f"{year-1}-09-01", f"{year-1}-11-30"),
     "winter": lambda year: (f"{year-1}-12-01", f"{year}-02-28"),
     "spring": lambda year: (f"{year}-03-01", f"{year}-05-31"),
-    "spring_to_june": lambda year: (f"{year}-03-01", f"{year}-06-30"),
-    "season_total": lambda year: (f"{year-1}-09-01", f"{year}-06-30"),
+    ### both end on the survey-date proxy (s01.END_MD), NOT 30 Jun -- weather after the
+    ### assessment cannot have caused it
+    "spring_to_june": lambda year: (f"{year}-03-01", f"{year}-06-20"),
+    "season_total": lambda year: (f"{year-1}-09-01", f"{year}-06-20"),
 }
 
 
