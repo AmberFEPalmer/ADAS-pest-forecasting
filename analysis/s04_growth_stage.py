@@ -1,6 +1,7 @@
 """
 Daily weather -> crop development features
 Aligns weather to crop growth stages e.g. GS31, GS39, GS61, GS75
+Measures how much disease favourable weather the crop experienced
 """
 
 import sys
@@ -17,7 +18,9 @@ from s03_thermal_wetness_splash import daily_splash_risk ### splash risk
 OUT_CSV = "analysis/growth_stage.csv"
 
 CROP_BASE = 0.0  
+### GS31 = start of stem extension
 MEDIAN_GS31_DATE = "04-15"   
+### only dates until 2025 used
 CALIBRATION_END = 2025
 SURVEY_MD = (6, 20)   
 
@@ -37,7 +40,7 @@ def daily_frame(region):
                                      df.wet_hours.to_numpy(dtype=float))
     return df
 
-
+### filter to 1 jan - 31 aug for a year (time when crop grows)
 def year_slice(df, year):
     sub = df[(df.time >= f"{year}-01-01") & (df.time <= f"{year}-08-31")].copy()
     if sub.empty:
@@ -58,12 +61,12 @@ def calibrate_gs31_threshold(dailies):
                 acc.append(upto.cum_cdd.iloc[-1])
     return float(np.median(acc))
 
-### compute the first date in a year when the cumulative CDD exceeds a threshold
+### compute the first date in a year when the cumulative degree days exceeds a threshold
 def stage_date(sub, threshold):
     hit = sub[sub.cum_cdd >= threshold]
     return None if hit.empty else hit.time.iloc[0]
 
-
+### given a date window return 6 statistics for that window
 def window_stats(sub, start, end, prefix):
     if start is None or end is None or end < start:
         return {f"{prefix}_{k}": np.nan for k in
@@ -82,7 +85,7 @@ def window_stats(sub, start, end, prefix):
         f"{prefix}_splash_risk": float(w.splash.sum()),
     }
 
-
+### main feature pipeline
 def build_features():
     dailies = {}
     for region in REGIONS:

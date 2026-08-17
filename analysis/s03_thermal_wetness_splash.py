@@ -22,28 +22,24 @@ OUT_CSV = "analysis/thermal_wetness_splash.csv"
 THERMAL_BASE = -2.4  
 SPLASH_RAIN_THRESHOLD = 2.0  
 
+### define seasonal windows
 WINDOWS = {
     "autumn": lambda year: (f"{year-1}-09-01", f"{year-1}-11-30"),
     "winter": lambda year: (f"{year-1}-12-01", f"{year}-02-28"),
     "spring": lambda year: (f"{year}-03-01", f"{year}-05-31"),
-    ### both end on the survey-date proxy (s01.END_MD), NOT 30 Jun -- weather after the
-    ### assessment cannot have caused it
     "spring_to_june": lambda year: (f"{year}-03-01", f"{year}-06-20"),
     "season_total": lambda year: (f"{year-1}-09-01", f"{year}-06-20"),
 }
 
-
+### splash = risk of disease spores spalshing on leaves due to rain
 def daily_splash_risk(precip, wet_hours):
-    """precip, wet_hours: same-length daily arrays (chronological). Splash risk on day t
-    needs a splash-capable rain event on day t AND an already-wet canopy carried over from
-    day t-1 -- see module docstring."""
     wet_prev = np.roll(wet_hours, 1)
     wet_prev[0] = wet_hours[0]  # no day-before-record available; assume unchanged rather than dry
     antecedent_wet_frac = np.clip(wet_prev / 24.0, 0.0, 1.0)
     splash_event_mm = np.where(precip >= SPLASH_RAIN_THRESHOLD, precip, 0.0)
     return splash_event_mm * antecedent_wet_frac
 
-
+### four summary numbers = thermal time, wetness hours, wet days, spalsh risk
 def window_agg(df, start, end):
     sub = df[(df.time >= start) & (df.time <= end)]
     if sub.empty:
@@ -63,7 +59,7 @@ def window_agg(df, start, end):
         "splash_risk": splash.sum(),
     }
 
-
+### loops over every region and year
 def build_features():
     rows = []
     for region in REGIONS:

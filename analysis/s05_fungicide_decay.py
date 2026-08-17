@@ -1,21 +1,10 @@
 """
 Fungicide timing/decay feature: an engineered replacement for feeding raw
-biennial dose_rate straight into a model (as analysis/s07_features_and_model.py did
-previously).
+biennial dose_rate straight into a model 
 
-Two problems with the raw DEFRA figure (data/fungicide_data.csv, see
-analysis/fungicide_audit.py):
-
-  1. Coverage is BIENNIAL (even years only, 1990-2024) 
-  2. It is a single annual (kg active substance / treated area) aggregate
-     with no application date 
-This module builds two features that address both:
-
-  fungicide_smoothed  : an exponential-kernel-weighted average of dose_rate
-      over nearby EVEN years within the same region 
-
-  fungicide_decay_dose : fungicide_smoothed multiplied by a within-season
-      RESIDUAL-ACTIVITY decay factor at the survey date. 
+Measured every two years - smoothed
+Convert raw kg into a rate per area
+Decay
 """
 
 import sys
@@ -26,14 +15,14 @@ import pandas as pd
 sys.path.insert(0, "analysis")
 from s01_season_reference import N_DAYS, compute_sow_offsets  # noqa: E402
 
-TAU_YEARS = 3.0          # kernel half-width (years) for smoothing across even-year readings
+TAU_YEARS = 3.0         
 MAX_GAP_YEARS = 10.0     # beyond this distance from the nearest reading, leave NaN (no extrapolation)
 
-T2_DAYS_AFTER_SOWING = 215   # approx GS39/flag-leaf timing for UK autumn-sown wheat (literature default)
+T2_DAYS_AFTER_SOWING = 215   # approx GS39/flag-leaf timing for UK autumn-sown wheat 
 PERSISTENCE_DAYS = 25        # approx residual protection window of a modern T2 fungicide mix
 SURVEY_DAY = N_DAYS          # end of the Oct1(Year-1) -> 20 Jun(Year) window used throughout analysis/
 
-
+### smooth to fill gaps bcs reported every 2 years
 def _smooth_region(years_avail, doses_avail, query_years, tau, max_gap):
     years_avail = np.asarray(years_avail, dtype=float)
     doses_avail = np.asarray(doses_avail, dtype=float)
@@ -46,7 +35,7 @@ def _smooth_region(years_avail, doses_avail, query_years, tau, max_gap):
         out[i] = float(np.sum(w * doses_avail) / np.sum(w))
     return out
 
-
+### convert kg applied to a rate per area
 def compute_fungicide_features(year_range=range(1971, 2027)):
     fung = pd.read_csv("data/fungicide_data.csv")
     fung["dose_rate"] = fung.fungicide_kg / fung.fungicide_area
@@ -62,6 +51,7 @@ def compute_fungicide_features(year_range=range(1971, 2027)):
 
     out = pd.DataFrame(rows)
 
+    ### decay - how much protection remains by survey date
     sow_offset = out.apply(lambda r: sow_map.get((r["Region"], r["Year"]), sow_default), axis=1)
     sow_day = np.clip(sow_offset, 0, SURVEY_DAY - 30)
     t2_day = sow_day + T2_DAYS_AFTER_SOWING
